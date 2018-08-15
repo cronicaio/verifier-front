@@ -45,7 +45,7 @@ class Verify extends Component {
                 <div className="params__value">{expireTimestamp ? format(new Date(expireTimestamp), 'DD/MM/YYYY') : 'N/A'}</div>
               </div>
               <div className="params__field">
-                <div className="params__key">Document ID:</div>
+                <div className="params__key">Document Key:</div>
                 <div className="params__value params__value_alt">{documentId}</div>
               </div>
             </div>

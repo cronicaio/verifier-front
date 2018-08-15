@@ -1,10 +1,10 @@
 import axios from 'axios';
 import qs from 'qs';
 
-let BASE_URL = `https://api.${window.location.hostname}`;
+let BASE_URL = `https://api-${window.location.hostname}`;
 
 if (process.env.development) {
-  BASE_URL = 'https://api.etihad-verifier.jb.vareger.com';
+  BASE_URL = 'https://api-etihad-verifier.jb.vareger.com';
 }
 
 const get = (path, token) => {

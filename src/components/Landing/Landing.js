@@ -57,9 +57,12 @@ class Landing extends Component {
               </nav>
             </div>
           </header>
-          {!!documents && documents.map((document, i) => (
+          {!!documents && typeof value === 'object' && value.constructor === Array && documents.map((document, i) => (
             <Verify key={i} document={document} onBackClick={this.handlBackClick} />
           ))}
+          {!!documents && typeof documents === 'object' && documents.constructor !== Array && (
+            <Verify document={documents} onBackClick={this.handlBackClick} />
+          )}
           {!documents && <Fragment>
             <div className="land__verify">
               <h2 className="land__verify-title">Document Verification</h2>
@@ -69,7 +72,7 @@ class Landing extends Component {
                 </label>
                 <input
                   className="land__verify-input input"
-                  placeholder="Please enter your Document ID"
+                  placeholder="Please enter your Document Key"
                   type="text"
                   onChange={this.onDocumentIdChange}
                   value={documentId}
@@ -424,7 +427,7 @@ class Landing extends Component {
           const json = JSON.parse(JSON.parse(e.target.result));
 
           Api.post('v1/document/search-by-json', {
-           'hashData': json.hashData
+           ...json
           }).then((response) => {
             this.setState({
               error: '',
