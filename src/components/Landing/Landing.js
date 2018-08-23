@@ -57,7 +57,8 @@ class Landing extends Component {
               </nav>
             </div>
           </header>
-          {!!documents && typeof value === 'object' && value.constructor === Array && documents.map((document, i) => (
+          {JSON.stringify(documents)}
+          {!!documents && typeof documents === 'object' && documents.constructor === Array && documents.map((document, i) => (
             <Verify key={i} document={document} onBackClick={this.handlBackClick} />
           ))}
           {!!documents && typeof documents === 'object' && documents.constructor !== Array && (
