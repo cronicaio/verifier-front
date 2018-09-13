@@ -14,7 +14,6 @@ class Search extends Component {
   componentDidMount() {
     Api.get(`v1/document/${this.props.match.params.id}`)
       .then((response) => {
-        console.log(response.data);
         this.setState({
           error: '',
           documents: [response.data],
