@@ -11,6 +11,6 @@ FROM httpd:alpine
 
 RUN mkdir /usr/local/apache2/htdocs/public-html/
 
-COPY --from=0 /home/node/build /usr/local/apache2/htdocs/
+COPY --from=0 /home/node/build/ /usr/local/apache2/htdocs/
 
 EXPOSE 80
