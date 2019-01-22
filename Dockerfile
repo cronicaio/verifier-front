@@ -7,6 +7,10 @@ WORKDIR /home/node/
 RUN npm install
 RUN npm run build
 
-CMD npm start
+FROM httpd:alpine
 
-EXPOSE 8080
+RUN mkdir /usr/local/apache2/htdocs/public-html/
+
+COPY --from=0 /home/node/build /usr/local/apache2/htdocs/
+
+EXPOSE 80
