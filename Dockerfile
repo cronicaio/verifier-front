@@ -1,8 +1,11 @@
-FROM node:alpine
+FROM node:11.7-alpine
 
-ADD ./* ./
+ADD . /home/node/
+
+WORKDIR /home/node/
 
 RUN npm install
+RUN npm run build
 
 CMD npm start
 
