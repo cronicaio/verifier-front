@@ -9,8 +9,6 @@ RUN npm run build
 
 FROM httpd:alpine
 
-RUN mkdir /usr/local/apache2/htdocs/public-html/
-
 #Add config for http to https rewrite rule
 ADD ./httpd.conf /usr/local/apache2/conf/httpd.conf
 ADD ./rewrite-http-to-https.conf /usr/local/apache2/conf/extra/rewrite-http-to-https.conf
