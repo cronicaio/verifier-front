@@ -487,7 +487,14 @@
         border-top-right-radius: 5px;
         .btn {
           margin-left: 35px;
-          color: white;
+          color: white !important;
+    
+          background-color: #52a1ff;
+          border-color: #298bff;
+    
+          &:hover {
+            background: #298bff;
+          }
         }
       }
   }
