@@ -468,6 +468,30 @@
     }
   }
 
+  &__cookies {
+    position: fixed;
+      z-index: 10000;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70vw;
+        margin: 0 auto;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.75);
+        box-shadow: 0 0 3px silver;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        .btn {
+          margin-left: 35px;
+          color: white;
+        }
+      }
+  }
+
   &__copyright {
     display: flex;
     align-items: center;
