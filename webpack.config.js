@@ -44,10 +44,10 @@ module.exports = (env = {}) => {
             }
           }
         },
-        {
-          test: /\.html$/,
-          loader: 'html-loader'
-        },
+        // {
+        //   test: /\.html$/,
+        //   loader: 'html-loader'
+        // },
         {
           test: /\.(scss)$/,
           use: ['css-hot-loader'].concat(extractSCSS.extract({
@@ -92,14 +92,15 @@ module.exports = (env = {}) => {
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
-      new webpack.optimize.UglifyJsPlugin({sourceMap: true}),
+      new webpack.optimize.UglifyJsPlugin({sourceMap: false, mangle: false}),
       new webpack.NamedModulesPlugin(),
       extractCSS,
       extractSCSS,
       new HtmlWebpackPlugin(
         {
-          inject: true,
-          template: './public/index.html'
+          filename: 'index.html',
+          template: './public/index.html',
+          inject: false
         }
       ),
       new CopyWebpackPlugin([

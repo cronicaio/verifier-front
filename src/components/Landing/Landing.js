@@ -26,6 +26,7 @@ class Landing extends Component {
                         height="14" viewBox="0 0 20 14" >
                         <path fill="#FFF" fillRule="evenodd" d="M1 6h18a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0-6h18a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0 12h18a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2z" />
                     </svg>
+                    <a className="header__logo"></a>
                     <svg className="land__logo" xmlns="http://www.w3.org/2000/svg" width="148" height="36" viewBox="0 0 148 36" >
                         <g fill="none"
                             fillRule="evenodd" >
@@ -393,6 +394,7 @@ tamper - proof, and shareable. </div> <a className="land__first-step-button"
 
             <footer className="land__footer" >
                 <header className="land__footer-header" >
+                    <a className="header__logo"></a>
                     <svg className="land__footer-logo"
                         xmlns="http://www.w3.org/2000/svg"
                         width="148"
