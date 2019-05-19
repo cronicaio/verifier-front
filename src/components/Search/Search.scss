@@ -16,7 +16,7 @@
       bottom: 0;
       right: 0;
       left: 0;
-      background: url('/img/svg/bg-mobile-menu.svg');
+      background: #2CAC4E;
       background-size: cover;
       
     }
@@ -43,7 +43,7 @@
       font-weight: 500;
       color: #ffffff;
       &-active {
-        color: #8acbff;
+        color: #2CAC4E;
       }
     }
     
@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 50px);
-    background: url('/img/svg/land-welcome-bg.svg');
+    background: #2CAC4E;
     background-size: cover;
     position: relative;
   }
@@ -143,7 +143,7 @@
     .land__nav-link {
       transition: .3s ease;
       &:hover, &_active {
-        color: #8acbff;
+        color: #2CAC4E;
       }
     }
   }

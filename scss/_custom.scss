@@ -43,7 +43,7 @@
 .linkButton {
   font-size: 16px;
   font-weight: bold;
-  color: #00682f;
+  color: #2CAC4E;
   text-decoration: underline;
   background: white;
   border: 0;
@@ -82,13 +82,13 @@
   }
 
   &:hover {
-    border: solid 2px #52a1ff;
+    border: solid 2px #2CAC4E;
   }
 
   &:focus { 
     outline: 0;
     box-shadow: 0 2px 12px 0 rgba(82, 161, 255, 0.2);
-    border: solid 2px #52a1ff;
+    border: solid 2px #2CAC4E;
   }
 
   &_date {
@@ -115,8 +115,8 @@
 .button {
   height: 50px;
   border-radius: 4px;
-  background-color: #52a1ff;
-  border: solid 2px #52a1ff;
+  background-color: #2CAC4E;
+  border: solid 2px #002c14;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.1px;
@@ -142,30 +142,30 @@
   }
 
   &:hover {
-    background: darken(#52a1ff, 8%);
-    border-color: darken(#52a1ff, 8%);
+    background: darken(#2CAC4E, 8%);
+    border-color: darken(#2CAC4E, 8%);
     text-decoration: none;
   }
 
   &:active, &:focus {
     outline: 0;
-    background: darken(#52a1ff, 18%);
-    border-color: darken(#52a1ff, 18%);
+    background: darken(#2CAC4E, 18%);
+    border-color: darken(#2CAC4E, 18%);
     text-decoration: none;
   }
 
   &_alt {
     background: transparent;
-    color: #52a1ff;
+    color: #2CAC4E;
     
     &:hover {
-      color: darken(#52a1ff, 8%);
+      color: darken(#2CAC4E, 8%);
       background: transparent;
     }
 
     &:active, &:focus {
       background: transparent;
-      color: darken(#52a1ff, 18%);
+      color: darken(#2CAC4E, 18%);
       outline: 0;
     }
   }
@@ -214,7 +214,7 @@
     color: #282d32;
     padding-bottom: 16px;
     &_alt {
-      color: #52a1ff;
+      color: #2CAC4E;
     }
   }
 }
