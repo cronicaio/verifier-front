@@ -69,7 +69,7 @@
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 50px);
-    background: url('/img/svg/land-welcome-bg.svg');
+    background: #00682f;
     background-size: cover;
     position: relative;
   }
@@ -489,11 +489,11 @@
           margin-left: 35px;
           color: white !important;
     
-          background-color: #52a1ff;
-          border-color: #298bff;
+          background-color: #00682f;
+          border-color: #00682f;
     
           &:hover {
-            background: #298bff;
+            background: #015527;
           }
         }
       }
