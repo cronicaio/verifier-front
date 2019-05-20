@@ -4,7 +4,7 @@ import qs from 'qs';
 let BASE_URL = `https://api-${window.location.hostname}`;
 
 if (process.env.development) {
-  BASE_URL = 'https://api-etihad-verifier.jb.vareger.com';
+  BASE_URL = 'https://api-verify.b1.cronica.pro';
 }
 
 const get = (path, token) => {

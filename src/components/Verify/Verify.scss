@@ -28,6 +28,7 @@
   }
 
   &__content {
+    position: relative;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
@@ -37,6 +38,16 @@
     padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
+  }
+
+  .button_alt {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .red {
+    color: red;
   }
 
   &__doc-view {
@@ -68,6 +79,7 @@
     }
   }
 }
+
 @media (max-width: 960px) {
   .verify {
     margin: 0;
@@ -75,11 +87,11 @@
     &__header {
       display: flex;
       align-items: center;
-      
+
       &-title {
         padding-left: 35px;
       }
-      
+
       &-icon {
         width: 30px;
         height: 30px;
