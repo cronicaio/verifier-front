@@ -2,8 +2,8 @@
     <defs>
         <path id="a" d="M0 50L1440 0v734L0 784z"/>
         <linearGradient id="b" x1="0%" y1="0%" y2="100%">
-            <stop offset="0%" stop-color="#86CCFF"/>
-            <stop offset="100%" stop-color="#54A0FE"/>
+            <stop offset="0%" stop-color="#54FE88"/>
+            <stop offset="100%" stop-color="#26E30B"/>
         </linearGradient>
     </defs>
     <g fill="none" fill-rule="evenodd">

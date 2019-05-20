@@ -227,7 +227,7 @@ class Landing extends Component {
                                             <circle cx="14"
                                                 cy="14"
                                                 r="12.5"
-                                                fill="#0BE0E2"
+                                                fill="#0BE21C"
                                                 fillOpacity=".3" />
                                             <path fill="#282D32"
                                                 fillRule="nonzero"
@@ -239,7 +239,7 @@ class Landing extends Component {
                                             <path stroke="#282D32"
                                                 strokeWidth="1.5"
                                                 d="M3.5 16.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5zM3.5 27.75a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5zM11 39.75a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5zM22 40.75a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5zM36 18.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5zM38.5 25.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5zM34.5 34.75a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5zM29.5 6.75a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5zM11 8.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5z" />
-                                            <path fill="#52A1FF"
+                                            <path fill="#2CAC4E"
                                                 fillRule="nonzero"
                                                 stroke="#282D32"
                                                 strokeWidth="1.5"
@@ -259,7 +259,7 @@ class Landing extends Component {
                                             <circle cx="14.5"
                                                 cy="13.5"
                                                 r="12.5"
-                                                fill="#0BE0E2"
+                                                fill="#0BE21C"
                                                 fillOpacity=".3" />
                                             <path fill="#282D32"
                                                 fillRule="nonzero"
@@ -270,7 +270,7 @@ class Landing extends Component {
                                             <path fill="#282D32"
                                                 fillRule="nonzero"
                                                 d="M18.667 21.5h18.768V23H18.667zM40.25 41.25V31h1.5v11.75H.25V31h1.5v10.25z" />
-                                            <path fill="#52A1FF"
+                                            <path fill="#2CAC4E"
                                                 stroke="#282D32"
                                                 strokeWidth="1.5"
                                                 d="M3.75 32.274h34.5v6.357H3.75z" />
@@ -289,13 +289,13 @@ class Landing extends Component {
                                             <circle cx="27"
                                                 cy="25"
                                                 r="25"
-                                                fill="#0BE0E2"
+                                                fill="#0BE21C"
                                                 fillOpacity=".3" />
                                             <path fill="#282D32"
                                                 d="M57 75V41h3v37H0V18h38v3H3v54z" />
                                             <path fill="#282D32"
                                                 d="M10 26h14v3H10v-3zm7 8h20v3H17v-3zm0 8h24v3H17v-3zm-7 24h34v3H10v-3zm0-8h22v3H10v-3zm0-8h34v3H10v-3zm26 8h14v3H36v-3z" />
-                                            <path fill="#52A1FF"
+                                            <path fill="#2CAC4E"
                                                 d="M41 2h36v36H41V2zm24.5 22a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z" />
                                             <path fill="#282D32"
                                                 fillRule="nonzero"
@@ -323,7 +323,7 @@ class Landing extends Component {
                                             <circle cx="25"
                                                 cy="26"
                                                 r="25"
-                                                fill="#0BE0E2"
+                                                fill="#0BE21C"
                                                 fillOpacity=".3" />
                                             <path fill="#282D32"
                                                 fillRule="nonzero"
@@ -331,7 +331,7 @@ class Landing extends Component {
                                             <path fill="#282D32"
                                                 fillRule="nonzero"
                                                 d="M18 43h23v3H18v-3zm0 8h23v3H18v-3zm0 8h36v3H18v-3zM1 70h70v8a4 4 0 0 1-4 4H5a4 4 0 0 1-4-4v-8zm3 3v5a1 1 0 0 0 1 1h62a1 1 0 0 0 1-1v-5H4zM44 5h40v27.328a6 6 0 0 1-1.986 4.46L64 53 45.986 36.788A6 6 0 0 1 44 32.328V5zm3 3v24.328a3 3 0 0 0 .993 2.23L64 48.964l16.007-14.406a3 3 0 0 0 .993-2.23V8H47z" />
-                                            <path fill="#52A1FF"
+                                            <path fill="#2CAC4E"
                                                 fillRule="nonzero"
                                                 d="M47 8v24.328a3 3 0 0 0 .993 2.23L64 48.964l16.007-14.406a3 3 0 0 0 .993-2.23V8H47z" />
                                             <path fill="#282D32"
@@ -349,12 +349,12 @@ class Landing extends Component {
                                             <circle cx="14"
                                                 cy="14"
                                                 r="12.5"
-                                                fill="#0BE0E2"
+                                                fill="#0BE21C"
                                                 fillOpacity=".3" />
                                             <path fill="#282D32"
                                                 fillRule="nonzero"
                                                 d="M7.089 17.056a5.678 5.678 0 0 1 4.762-4.243l1.192-.156.042-1.196c.19-5.317 4.582-9.546 9.941-9.546 4.426 0 8.283 2.904 9.532 7.061l.27.898.935.103c3.579.393 6.316 3.417 6.316 7.032 0 3.757-3.457 7.333-7.898 8.007l.08 1.413c5.113-.344 9.239-4.894 9.239-9.42 0-4.37-3.317-7.97-7.58-8.439A11.367 11.367 0 0 0 23.025.5c-6.14 0-11.144 4.848-11.36 10.91a7.099 7.099 0 0 0-6.027 5.615M15.75 29.925a3.751 3.751 0 0 1 .75-7.425 3.75 3.75 0 0 1 .75 7.425V33h-1.5v-3.075z" />
-                                            <path fill="#52A1FF"
+                                            <path fill="#2CAC4E"
                                                 d="M16.952 28.455a2.251 2.251 0 1 0-.904 0l.452.092.452-.092z" />
                                             <path fill="#282D32"
                                                 d="M2.5 40h28v1.5h-28z" />
@@ -378,9 +378,9 @@ class Landing extends Component {
                                             <circle cx="29"
                                                 cy="28"
                                                 r="25"
-                                                fill="#0BE0E2"
+                                                fill="#0BE21C"
                                                 fillOpacity=".3" />
-                                            <path fill="#52A1FF"
+                                            <path fill="#2CAC4E"
                                                 d="M62 8l8.66 5v10L62 28l-8.66-5V13L62 8zm10 17l8.66 5v10L72 45l-8.66-5V30L72 25zm-20 0l8.66 5v10L52 45l-8.66-5V30L52 25z" />
                                             <path fill="#282D32"
                                                 fillRule="nonzero"
@@ -496,7 +496,7 @@ tamper - proof, and shareable. </div> <a className="land__first-step-button"
                                                                                         href="#b" /> < circle cx="22"
                                                                                             cy="22"
                                                                                             r="22"
-                                                                                            fill="#52A1FF" /> < use fill="#FFF"
+                                                                                            fill="#2CAC4E" /> < use fill="#FFF"
                                                                                                 href="#c" /> < path stroke="#FFF"
                                                                                                     strokeWidth="2.2"
                                                                                                     d="M20.16 32.74a.441.441 0 0 0 .004-.003zm.27-.378c.074-.119.163-.27.282-.478.304-.531.422-.727.603-.974.36-.49.723-.8 1.271-.871 5.56-.727 8.58-3.265 8.58-7.804 0-4.528-4.134-7.202-10.633-7.202-6.498 0-10.633 2.674-10.633 7.202 0 4.37 2.78 6.835 8.046 7.724.804.135 1.099.466 2.034 1.792.202.287.338.472.45.611zm2.47-.146l-.028.004a.875.875 0 0 0 .074-.013z" /> < path fill="#FFF"

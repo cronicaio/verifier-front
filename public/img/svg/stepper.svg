@@ -25,20 +25,20 @@
     <g fill="none" fill-rule="evenodd">
         <g transform="translate(10 2)">
             <use fill="#000" filter="url(#a)" xlink:href="#b"/>
-            <use fill="#52A1FF" xlink:href="#b"/>
+            <use fill="#2CAC4E" xlink:href="#b"/>
         </g>
         <path fill="#E9EEF5" d="M446 51.25h275v1.5H446z"/>
         <circle cx="40" cy="40" r="40" fill="#FFF" stroke="#E9EEF5" stroke-width="1.5" transform="translate(721 12)"/>
         <g transform="translate(356 2)">
             <use fill="#000" filter="url(#c)" xlink:href="#d"/>
-            <use fill="#FFF" stroke="#52A1FF" stroke-width="5" xlink:href="#d"/>
-            <circle cx="50" cy="50" r="50" stroke="#52A1FF" stroke-width="1.5" opacity=".5"/>
+            <use fill="#FFF" stroke="#2CAC4E" stroke-width="5" xlink:href="#d"/>
+            <circle cx="50" cy="50" r="50" stroke="#2CAC4E" stroke-width="1.5" opacity=".5"/>
         </g>
         <g transform="translate(10 12)">
             <use fill="#000" filter="url(#e)" xlink:href="#f"/>
-            <use fill="#52A1FF" xlink:href="#f"/>
+            <use fill="#2CAC4E" xlink:href="#f"/>
             <circle cx="40" cy="40" r="36.25" stroke="#FFF" stroke-width="7.5"/>
-            <use stroke="#52A1FF" stroke-width="5" xlink:href="#f"/>
+            <use stroke="#2CAC4E" stroke-width="5" xlink:href="#f"/>
         </g>
         <text fill="#5C6979" font-family="MuseoSansCyrl" font-weight="500" font-size="32" letter-spacing=".152" transform="translate(10 2)">
             <tspan x="741.852" y="61">3</tspan>
