@@ -16,6 +16,10 @@
   <link href="<%= htmlWebpackPlugin.files.css[0] %>" rel="stylesheet"/>
   <link href="<%= htmlWebpackPlugin.files.css[1] %>" rel="stylesheet"/>
   <link href="custom.css" rel="stylesheet"/>
+  <script>
+    if (self == top) {document.documentElement.style.display = 'block';}
+    else {top.location = self.location;}
+  </script>
 </head>
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
