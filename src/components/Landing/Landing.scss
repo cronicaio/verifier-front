@@ -115,7 +115,7 @@
     }
 
     &-link {
-      color: white;
+      color: white !important;
       text-transform: uppercase;
       text-decoration: none;
       font-size: 12px;
@@ -463,7 +463,7 @@
     .land__nav-link {
       transition: .3s ease;
       &:hover, &_active {
-        color: #8acbff;
+        color: #8acbff !important;
       }
     }
   }
