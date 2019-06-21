@@ -12,7 +12,7 @@ class Verify extends Component {
 
     render() {
         const { onBackClick, document, isBackButton } = this.props;
-        const { documentId, recipientName, issuerName, issueTimestamp, expireTimestamp, documentLink, isRevoked } = document;
+        const { documentId, recipientName, issuerName, issueTimestamp, expireTimestamp, documentLink, isRevoked, verifier, organization } = document;
 
         return (<div className="verify" >
             <header className="verify__header" >
@@ -55,6 +55,14 @@ class Verify extends Component {
                             <div className="params__value red" > Expired </div>
                         </div>
                         )}
+                        <div className="params__field" >
+                            <div className="params__key" > Signature: </div>
+                            <div className="params__value red" > {verified ? 'verified' : 'invalid'} </div>
+                        </div>
+                        <div className="params__field" >
+                            <div className="params__key" > Signature owner: </div>
+                            <div className="params__value red" > {organization} </div>
+                        </div>
                         <div className="params__field" >
                             <div className="params__key" > Document ID: </div>
                             <div className="params__value params__value_alt" > {documentId} </div>
