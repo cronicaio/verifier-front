@@ -12,7 +12,7 @@ class Verify extends Component {
 
     render() {
         const { onBackClick, document, isBackButton } = this.props;
-        const { documentId, recipientName, issuerName, issueTimestamp, expireTimestamp, documentLink, isRevoked, verifier, organization } = document;
+        const { documentId, recipientName, issuerName, issueTimestamp, expireTimestamp, documentLink, isRevoked, verified, organization } = document;
 
         return (<div className="verify" >
             <header className="verify__header" >
