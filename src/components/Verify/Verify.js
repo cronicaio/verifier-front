@@ -65,13 +65,13 @@ class Verify extends Component {
                         )}
                         <div className="params__field" >
                             <div className="params__key" > Signature: </div>
-                            <div className={'params__value ' + (!!verified) ? 'green' : 'red'} >
+                            <div className={'params__value ' + ((!!verified) ? 'green' : 'red')} >
                                 {(!!verified) ? 'verified' : 'invalid'}
                             </div>
                         </div>
                         <div className="params__field" >
                             <div className="params__key" > Signature owner: </div>
-                            <div className={'params__value ' + (!!verified) ? 'green' : 'red'} >
+                            <div className={'params__value ' + ((!!verified) ? 'green' : 'red')} >
                                 {organization}
                             </div>
                         </div>
