@@ -29,19 +29,27 @@ class Verify extends Component {
                     <div className="params" >
                         <div className="params__field" >
                             <div className="params__key" > Issuer: </div>
-                            <div className="params__value" > {issuerName} </div>
+                            <div className="params__value" >
+                                {issuerName}
+                            </div>
                         </div>
                         <div className="params__field" >
                             <div className="params__key" > Document Holder: </div>
-                            <div className="params__value" > {recipientName} </div>
+                            <div className="params__value" >
+                                {recipientName}
+                            </div>
                         </div>
                         <div className="params__field" >
                             <div className="params__key" > Issue Date: </div>
-                            <div className="params__value" > {format(new Date(issueTimestamp), 'DD/MM/YYYY')} </div>
+                            <div className="params__value" >
+                                {format(new Date(issueTimestamp), 'DD/MM/YYYY')}
+                            </div>
                         </div>
                         <div className="params__field" >
                             <div className="params__key" > Expiry Date: </div>
-                            <div className="params__value" > {expireTimestamp ? format(new Date(expireTimestamp), 'DD/MM/YYYY') : 'N/A'} </div>
+                            <div className="params__value" >
+                                {expireTimestamp ? format(new Date(expireTimestamp), 'DD/MM/YYYY') : 'N/A'}
+                            </div>
                         </div>
                         {(!!isRevoked) && (
                         <div className="params__field" >
@@ -57,15 +65,21 @@ class Verify extends Component {
                         )}
                         <div className="params__field" >
                             <div className="params__key" > Signature: </div>
-                            <div className={'params__value ' + (!!verified) ? 'green' : 'red'} > {(!!verified) ? 'verified' : 'invalid'} </div>
+                            <div className={'params__value ' + (!!verified) ? 'green' : 'red'} >
+                                {(!!verified) ? 'verified' : 'invalid'}
+                            </div>
                         </div>
                         <div className="params__field" >
                             <div className="params__key" > Signature owner: </div>
-                            <div className={'params__value ' + (!!verified) ? 'green' : 'red'} > {organization} </div>
+                            <div className={'params__value ' + (!!verified) ? 'green' : 'red'} >
+                                {organization}
+                            </div>
                         </div>
                         <div className="params__field" >
                             <div className="params__key" > Document ID: </div>
-                            <div className="params__value params__value_alt" > {documentId} </div>
+                            <div className="params__value params__value_alt" >
+                                {documentId}
+                            </div>
                         </div>
                     </div>
                     { /*<button className="button button_alt">↓ Download Document</button>*/}
