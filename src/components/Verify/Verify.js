@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { format } from 'date-fns';
 import PDFViewer from 'mgr-pdf-viewer-react';
 import './Verify.scss';
+import { Api } from '../../api';
 
 class Verify extends Component {
 
     static defaultProps = {
         isBackButton: true,
     }
-
 
     render() {
         const { onBackClick, document, isBackButton } = this.props;
@@ -85,7 +85,7 @@ class Verify extends Component {
                     { /*<button className="button button_alt">↓ Download Document</button>*/}
                 </div>
                 {uuid && (
-                    <a href={BASE_URL+uuid} className="button button_alt" target="_blank" download >
+                    <a href={Api.BASE_URL+'/v1/pdf/'+uuid} className="button button_alt" target="_blank" download >
                         ↓ Download Document
                     </a>
                 )}
@@ -101,7 +101,7 @@ class Verify extends Component {
             {uuid && < div className="verify__pdf-wrapper" >
                 <div className="verify__pdf" >
                     <PDFViewer document={
-                        { url: BASE_URL+uuid }}
+                        { url:Api.BASE_URL+'/v1/pdf/'+uuid }}
                         scale={this.getScale(window.innerWidth)}
                     />
                 </div>
