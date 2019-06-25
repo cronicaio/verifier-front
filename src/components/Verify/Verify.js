@@ -12,7 +12,7 @@ class Verify extends Component {
 
     render() {
         const { onBackClick, document, isBackButton } = this.props;
-        const { documentId, recipientName, issuerName, issueTimestamp, expireTimestamp, documentLink, isRevoked, verified, organization } = document;
+        const { documentId, recipientName, issuerName, issueTimestamp, expireTimestamp, uuid, isRevoked, verified, organization } = document;
 
         return (<div className="verify" >
             <header className="verify__header" >
@@ -84,8 +84,8 @@ class Verify extends Component {
                     </div>
                     { /*<button className="button button_alt">↓ Download Document</button>*/}
                 </div>
-                {documentLink && (
-                    <a href={documentLink} className="button button_alt" target="_blank" download >
+                {uuid && (
+                    <a href={BASE_URL+uuid} className="button button_alt" target="_blank" download >
                         ↓ Download Document
                     </a>
                 )}
@@ -98,10 +98,10 @@ class Verify extends Component {
                 </div>*/
             }
 
-            {documentLink && < div className="verify__pdf-wrapper" >
+            {uuid && < div className="verify__pdf-wrapper" >
                 <div className="verify__pdf" >
                     <PDFViewer document={
-                        { url: documentLink }}
+                        { url: BASE_URL+uuid }}
                         scale={this.getScale(window.innerWidth)}
                     />
                 </div>
