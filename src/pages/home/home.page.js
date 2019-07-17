@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import PDFViewer from 'mgr-pdf-viewer-react';
 
-import { Api, BASE_URL } from '../../services/api';
+import { Api } from '../../services/api';
 
 import Img_01 from '../../assets/Image_01@2x.png';
 import Img_02 from '../../assets/Image_02@2x.png';
@@ -15,7 +15,7 @@ import './home.page.scss';
 function Home() {
 
   const [isLoading, setLoading] = useState(false);
-  const [documentID, setDocumentID] = useState('0x24d9cb3d855fa04b047e56c8398ef3c4c48321bf02848dedb7e1f7fb6359284936eecaa211cef53d');
+  const [documentID, setDocumentID] = useState(''); // 0x24d9cb3d855fa04b047e56c8398ef3c4c48321bf02848dedb7e1f7fb6359284936eecaa211cef53d
   const [result, setResult] = useState(null);
 
   const formatDate = (timestamp) => {
