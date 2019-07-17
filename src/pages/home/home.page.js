@@ -22,9 +22,14 @@ function Home() {
     return [executeScroll, htmlElementAttributes];
   }
 
+  const testID = process.env.NODE_ENV === 'development' 
+    ? '0x24d9cb3d855fa04b047e56c8398ef3c4c48321bf02848dedb7e1f7fb6359284936eecaa211cef53d' 
+    : '';
+
   const [isLoading, setLoading] = useState(false);
-  const [documentID, setDocumentID] = useState(''); // 0x24d9cb3d855fa04b047e56c8398ef3c4c48321bf02848dedb7e1f7fb6359284936eecaa211cef53d
+  const [documentID, setDocumentID] = useState(testID); 
   const [result, setResult] = useState(null);
+  
   const [executeScroll, scrollHtmlAttributes] = useScroll();
 
   const formatDate = (timestamp) => {
