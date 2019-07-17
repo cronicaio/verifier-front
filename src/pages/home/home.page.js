@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from "react-router-dom";
 
 import PDFViewer from 'mgr-pdf-viewer-react';
@@ -18,9 +18,23 @@ function Home() {
   const [documentID, setDocumentID] = useState(''); // 0x24d9cb3d855fa04b047e56c8398ef3c4c48321bf02848dedb7e1f7fb6359284936eecaa211cef53d
   const [result, setResult] = useState(null);
 
+  
+
   const formatDate = (timestamp) => {
     return new Date(timestamp).toLocaleDateString();
   }
+  
+  const useScroll = () => {
+    const ref = useRef(null)
+    const executeScroll = () => {
+      window.scrollTo(0, ref.current.offsetTop)
+    }
+    const htmlElementAttributes = { ref }
+
+    return [executeScroll, htmlElementAttributes]
+  }
+
+  const [executeScroll, scrollHtmlAttributes] = useScroll();
 
   const handleVerify = () => {
     setLoading(true);
@@ -30,6 +44,7 @@ function Home() {
         // console.log(response.data);
         setResult({ ...response.data, documentLink: Api.BASE_URL + '/v1/pdf/' + response.data.uuid});
         setDocumentID('');
+        executeScroll();
       })
       .catch(error => {
         console.log(error.response);
@@ -60,9 +75,9 @@ function Home() {
         </div>
       </header>
 
-      <section >
+      <section {...scrollHtmlAttributes}>
         {!!result && (
-          <div className="HomeBlock TempBlock">
+          <div className="HomeBlock TempBlock" >
             <h2 className="text-center">Document Verified</h2>
             <div className="ResultGrid">
               <div className="params__field" >
