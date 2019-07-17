@@ -16,8 +16,8 @@ function Home() {
 
   const useScroll = () => {
     const ref = useRef(null);
-    const executeScroll = () => { window.scrollTo(0, ref.current.offsetTop); }
     const htmlElementAttributes = { ref };
+    const executeScroll = () => { window.scrollTo(0, ref.current.offsetTop); }
 
     return [executeScroll, htmlElementAttributes];
   }
@@ -37,7 +37,6 @@ function Home() {
   }
 
   const handleVerify = () => {
-
     if (!documentID)
       return;
 
@@ -120,7 +119,7 @@ function Home() {
             {result.documentLink && (
               <div className="ResultDownload">
                 <p className="text-center">
-                  <a href={result.documentLink} className="button" target="_blank" download >↓ Download Document</a>
+                  <a href={result.documentLink} className="button" target="_blank" rel="noopener noreferrer" download >↓ Download Document</a>
                 </p>
                 <PDFViewer document={{ url: result.documentLink }}  scale={1.5} />
               </div>
