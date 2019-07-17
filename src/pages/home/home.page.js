@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import PDFViewer from 'mgr-pdf-viewer-react';
 
-import { Api } from '../../services/api';
+import { Api, BASE_URL } from '../../services/api';
 
 import Img_01 from '../../assets/Image_01@2x.png';
 import Img_02 from '../../assets/Image_02@2x.png';
@@ -27,8 +27,8 @@ function Home() {
 
     Api.post(`v1/document/`, { documentID })
       .then(response => {
-        console.log(response.data);
-        setResult(response.data);
+        // console.log(response.data);
+        setResult({ ...response.data, documentLink: Api.BASE_URL + '/v1/pdf/' + response.data.uuid});
         setDocumentID('');
       })
       .catch(error => {
@@ -100,8 +100,8 @@ function Home() {
             </div>
           
             {result.documentLink && (
-              <div>
-                <p>
+              <div className="ResultDownload">
+                <p className="text-center">
                   <a href={result.documentLink} className="button" target="_blank" download >↓ Download Document</a>
                 </p>
                 <PDFViewer document={{ url: result.documentLink }}  scale={1.5} />

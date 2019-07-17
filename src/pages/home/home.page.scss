@@ -124,6 +124,16 @@
   }
 }
 
+.ResultDownload {
+  margin-top: 60px;
+
+  .mgrpdf__wrapper {
+    margin-top: 60px;
+    border-radius: 10px;
+    border: solid 1px #e8ecf1;
+  }
+}
+
 .ResultGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

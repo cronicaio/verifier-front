@@ -87,4 +87,5 @@ export const Api = {
   put,
   deleteReq,
   postFormData,
+  BASE_URL
 };
