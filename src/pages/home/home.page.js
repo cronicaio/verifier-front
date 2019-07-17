@@ -89,6 +89,10 @@ function Home(args) {
                 <div className="params__value" > {result.issuerName} </div>
               </div>
               <div className="params__field" >
+                <div className="params__key" > Signature owner: </div>
+                <div className="params__value" > {result.organization} </div>
+              </div>
+              <div className="params__field" >
                 <div className="params__key" > Document Holder: </div>
                 <div className="params__value" > {result.recipientName} </div>
               </div>
@@ -104,6 +108,18 @@ function Home(args) {
                 <div className="params__field" >
                   <div className="params__key" > Status: </div>
                   <div className="params__value red" > Revoked </div>
+                </div>
+              )}
+              {(!!result.verified) && (
+                <div className="params__field" >
+                  <div className="params__key" > Status: </div>
+                  <div className="params__value green" > Verified </div>
+                </div>
+              )}
+              {(!result.verified) && (
+                <div className="params__field" >
+                  <div className="params__key" > Status: </div>
+                  <div className="params__value red" > Not Verified </div>
                 </div>
               )}
               {!!result.expireTimestamp && !result.isRevoked && (result.expireTimestamp <= Date.now()) && (
