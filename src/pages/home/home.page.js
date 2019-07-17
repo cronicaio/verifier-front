@@ -14,34 +14,28 @@ import './home.page.scss';
 
 function Home() {
 
+  const useScroll = () => {
+    const ref = useRef(null);
+    const executeScroll = () => { window.scrollTo(0, ref.current.offsetTop); }
+    const htmlElementAttributes = { ref };
+
+    return [executeScroll, htmlElementAttributes];
+  }
+
   const [isLoading, setLoading] = useState(false);
   const [documentID, setDocumentID] = useState(''); // 0x24d9cb3d855fa04b047e56c8398ef3c4c48321bf02848dedb7e1f7fb6359284936eecaa211cef53d
   const [result, setResult] = useState(null);
-
-  
+  const [executeScroll, scrollHtmlAttributes] = useScroll();
 
   const formatDate = (timestamp) => {
     return new Date(timestamp).toLocaleDateString();
   }
-  
-  const useScroll = () => {
-    const ref = useRef(null)
-    const executeScroll = () => {
-      window.scrollTo(0, ref.current.offsetTop)
-    }
-    const htmlElementAttributes = { ref }
-
-    return [executeScroll, htmlElementAttributes]
-  }
-
-  const [executeScroll, scrollHtmlAttributes] = useScroll();
 
   const handleVerify = () => {
     setLoading(true);
 
     Api.post(`v1/document/`, { documentID })
       .then(response => {
-        // console.log(response.data);
         setResult({ ...response.data, documentLink: Api.BASE_URL + '/v1/pdf/' + response.data.uuid});
         setDocumentID('');
         executeScroll();
