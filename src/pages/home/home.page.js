@@ -112,13 +112,13 @@ function Home(args) {
               )}
               {(!!result.verified) && (
                 <div className="params__field" >
-                  <div className="params__key" > Status: </div>
+                  <div className="params__key" > Signature: </div>
                   <div className="params__value green" > Verified </div>
                 </div>
               )}
               {(!result.verified) && (
                 <div className="params__field" >
-                  <div className="params__key" > Status: </div>
+                  <div className="params__key" > Signature: </div>
                   <div className="params__value red" > Not Verified </div>
                 </div>
               )}
