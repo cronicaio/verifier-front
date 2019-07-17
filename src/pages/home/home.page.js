@@ -29,7 +29,7 @@ function Home() {
   const [isLoading, setLoading] = useState(false);
   const [documentID, setDocumentID] = useState(testID); 
   const [result, setResult] = useState(null);
-  
+
   const [executeScroll, scrollHtmlAttributes] = useScroll();
 
   const formatDate = (timestamp) => {
@@ -37,6 +37,10 @@ function Home() {
   }
 
   const handleVerify = () => {
+
+    if (!documentID)
+      return;
+
     setLoading(true);
 
     Api.post(`v1/document/`, { documentID })
