@@ -1,0 +1,26 @@
+.ContactPage {
+  .PageHeader {
+    height: 400px;
+  }
+
+  .ContactBlock {
+    width: 990px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+    padding-top: 100px;
+
+    font-size: 22px;
+    color: #858a97;
+  }
+
+  .FormBlock {
+    width: 990px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+
+    color: #858a97;
+  }
+}

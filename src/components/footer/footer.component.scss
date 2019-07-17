@@ -1,0 +1,80 @@
+.AppFooter {
+  padding-top: 72px;
+
+  .Grid {
+    width: 860px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+
+    h5 {
+      color: #041865;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding: 18px 0;
+        font-size: 14px;
+        color: #858a97;
+      }
+    }
+
+    .Verified {
+      margin-top: 30px;
+    }
+  }
+
+  .Block {
+    width: 860px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    font-size: 14px;
+    color: #858a97;
+  }
+
+  .Copyright {
+    span {
+      margin-right: 50px;
+    }
+  }
+
+  .Subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .Email-opt-in {
+    position: relative;
+    margin-left: -40px;
+
+    input {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.38px;
+      text-transform: uppercase;
+
+      width: 380px;
+      padding: 18px 30px;
+      border-radius: 32px;
+      background-color: white;
+      border: 1px solid #c9cfd6;
+
+      outline: none !important;
+    }
+    button {
+      position: absolute;
+      top: 4px;
+      right: 5px;
+      padding: 15px 40px;
+      background-color: #2bc0ff;
+    }
+  }
+}

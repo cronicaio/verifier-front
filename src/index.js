@@ -1,31 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter, Route, Switch} from 'react-router-dom';
-import { unregister } from './registerServiceWorker';
-unregister();
 
-// Styles
-// Import Flag Icons Set
-import 'flag-icon-css/css/flag-icon.min.css';
-// Import Font Awesome Icons Set
-import 'font-awesome/css/font-awesome.min.css';
-// Import Simple Line Icons Set
-import 'simple-line-icons/css/simple-line-icons.css';
-// Import Main styles for this application
-import '../scss/style.scss'
-// Temp fix for reactstrap
-import '../scss/core/_dropdown-menu-right.scss'
+import * as serviceWorker from './serviceWorker';
 
-// Containers
-import Landing from './components/Landing/';
-import Search from './components/Search/';
+import App from './pages/App';
 
-ReactDOM.render((
-  <HashRouter>
-    <Switch>
-      <Route exact path="/" component={Landing}/>
-      <Route path="/searchByIdStructured/:id" component={Search}/>
-      <Route path="/searchByIdNonStructured/:id" component={Search}/>
-    </Switch>
-  </HashRouter>
-), document.getElementById('root'));
+import 'circular-std';
+import './index.scss';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

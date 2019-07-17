@@ -1,0 +1,57 @@
+.CasesPage {
+  .PageHeader {
+    height: 350px;
+
+    margin-bottom: -50px;
+  }
+
+  h1 {
+    font-size: 56px;
+    color: white;
+  }
+
+  h4 {
+    font-size: 29px;
+    color: #8bebff;
+  }
+
+  h5 {
+    font-size: 35px;
+    font-weight: 500;
+    color: #041865;
+  }
+
+  .CaseBlock {
+    width: 990px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+
+    display: flex;
+
+    padding: 88px 122px;
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 13px 16px 0 rgba(4, 19, 32, 0.09);
+
+    div + div {
+      margin-left: 50px;
+    }
+
+    h5 {
+      margin-top: 0;
+      font-size: 35px;
+      color: #041865;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 1.45;
+      color: #858a97;
+    }
+
+    img {
+      margin-top: 0px;
+    }
+  }
+}
