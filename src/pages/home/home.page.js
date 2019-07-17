@@ -12,7 +12,7 @@ import Img_28 from '../../assets/Image_28@3x.png';
 
 import './home.page.scss';
 
-function Home() {
+function Home(args) {
 
   const useScroll = () => {
     const ref = useRef(null);
@@ -26,8 +26,10 @@ function Home() {
     ? '0x24d9cb3d855fa04b047e56c8398ef3c4c48321bf02848dedb7e1f7fb6359284936eecaa211cef53d' 
     : '';
 
+  let documentId = args.match.params.id !== undefined ? args.match.params.id : testID;
+
   const [isLoading, setLoading] = useState(false);
-  const [documentID, setDocumentID] = useState(testID); 
+  const [documentID, setDocumentID] = useState(documentId); 
   const [result, setResult] = useState(null);
 
   const [executeScroll, scrollHtmlAttributes] = useScroll();

@@ -16,6 +16,8 @@ function App() {
       <Router>
         <Header />
         <Route exact path="/" component={Home} />
+        <Route path="/searchByIdStructured/:id" component={Home}/>
+        <Route path="/searchByIdNonStructured/:id" component={Home}/>
         <Route exact path="/product" component={Product} />
         <Route exact path="/cases" component={Cases} />
         <Route exact path="/contact" component={Contact} />
