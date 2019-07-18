@@ -800,7 +800,7 @@ for Blockchain Certificates </span> <span> ©CRONICA INC.2019 </span> </div>
             error: '',
         })
 
-        Api.get(`v1/document/${documentId}`)
+        Api.post(`v1/document/`, { documentID: documentId })
             .then((response) => {
                 this.setState({
                     error: '',
