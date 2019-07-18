@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { format } from 'date-fns';
 import PDFViewer from 'mgr-pdf-viewer-react';
 import './Verify.scss';
+import { Api } from '../../api';
 
 class Verify extends Component {
 
@@ -9,10 +10,9 @@ class Verify extends Component {
         isBackButton: true,
     }
 
-
     render() {
         const { onBackClick, document, isBackButton } = this.props;
-        const { documentId, recipientName, issuerName, issueTimestamp, expireTimestamp, documentLink, isRevoked } = document;
+        const { documentId, recipientName, issuerName, issueTimestamp, expireTimestamp, uuid, isRevoked, verified, organization } = document;
 
         return (<div className="verify" >
             <header className="verify__header" >
@@ -29,19 +29,27 @@ class Verify extends Component {
                     <div className="params" >
                         <div className="params__field" >
                             <div className="params__key" > Issuer: </div>
-                            <div className="params__value" > {issuerName} </div>
+                            <div className="params__value" >
+                                {issuerName}
+                            </div>
                         </div>
                         <div className="params__field" >
                             <div className="params__key" > Document Holder: </div>
-                            <div className="params__value" > {recipientName} </div>
+                            <div className="params__value" >
+                                {recipientName}
+                            </div>
                         </div>
                         <div className="params__field" >
                             <div className="params__key" > Issue Date: </div>
-                            <div className="params__value" > {format(new Date(issueTimestamp), 'DD/MM/YYYY')} </div>
+                            <div className="params__value" >
+                                {format(new Date(issueTimestamp), 'DD/MM/YYYY')}
+                            </div>
                         </div>
                         <div className="params__field" >
                             <div className="params__key" > Expiry Date: </div>
-                            <div className="params__value" > {expireTimestamp ? format(new Date(expireTimestamp), 'DD/MM/YYYY') : 'N/A'} </div>
+                            <div className="params__value" >
+                                {expireTimestamp ? format(new Date(expireTimestamp), 'DD/MM/YYYY') : 'N/A'}
+                            </div>
                         </div>
                         {(!!isRevoked) && (
                         <div className="params__field" >
@@ -56,14 +64,28 @@ class Verify extends Component {
                         </div>
                         )}
                         <div className="params__field" >
+                            <div className="params__key" > Signature: </div>
+                            <div className={'params__value ' + ((!!verified) ? 'green' : 'red')} >
+                                {(!!verified) ? 'verified' : 'invalid'}
+                            </div>
+                        </div>
+                        <div className="params__field" >
+                            <div className="params__key" > Signature owner: </div>
+                            <div className={'params__value ' + ((!!verified) ? 'green' : 'red')} >
+                                {organization}
+                            </div>
+                        </div>
+                        <div className="params__field" >
                             <div className="params__key" > Document ID: </div>
-                            <div className="params__value params__value_alt" > {documentId} </div>
+                            <div className="params__value params__value_alt" >
+                                {documentId}
+                            </div>
                         </div>
                     </div>
                     { /*<button className="button button_alt">↓ Download Document</button>*/}
                 </div>
-                {documentLink && (
-                    <a href={documentLink} className="button button_alt" target="_blank" download >
+                {uuid && (
+                    <a href={Api.BASE_URL+'/v1/pdf/'+uuid} className="button button_alt" target="_blank" download >
                         ↓ Download Document
                     </a>
                 )}
@@ -76,10 +98,10 @@ class Verify extends Component {
                 </div>*/
             }
 
-            {documentLink && < div className="verify__pdf-wrapper" >
+            {uuid && < div className="verify__pdf-wrapper" >
                 <div className="verify__pdf" >
                     <PDFViewer document={
-                        { url: documentLink }}
+                        { url:Api.BASE_URL+'/v1/pdf/'+uuid }}
                         scale={this.getScale(window.innerWidth)}
                     />
                 </div>

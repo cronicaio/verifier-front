@@ -82,6 +82,7 @@ const deleteReq = (path, token) => (
 
 export const Api = {
   get,
+  BASE_URL,
   post,
   put,
   deleteReq,
