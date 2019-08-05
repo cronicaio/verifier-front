@@ -52,9 +52,9 @@ function Footer() {
         <img width="240px" src={Social} alt="" />
       </div>
       <div className="Block Copyright">
-        <span>Terms of Use</span>
-        <span>Privacy Policy</span>
-        <span>Cookie Policy</span>
+        <span className="hiddenMobile">Terms of Use</span>
+        <span className="hiddenMobile">Privacy Policy</span>
+        <span className="hiddenMobile">Cookie Policy</span>
         <span>© Cronica 2019</span>
       </div>
     </footer>

@@ -8,13 +8,16 @@ import Logo from '../../assets/svg/logo.svg';
 function Header() {
   return (
     <header className="AppHeader">
-      <NavLink to="/">
-        <img src={Logo} alt="cronica" />
+      <NavLink to="/" className="AppHeaderLogo">
+        <img src={Logo} alt="Cronica" />
       </NavLink>
       <nav className="hiddenMobile">
         <NavLink to="/" exact>Home</NavLink>
         <NavLink to="/product">Project</NavLink>
         <NavLink to="/contact">Contact Us</NavLink>
+      </nav>
+      <nav className="hiddenDesktop mobileMenuBtn">
+        <span>☰</span>
       </nav>
     </header>
   );

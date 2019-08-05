@@ -1,67 +1,78 @@
-.AppHeader {
-  position: absolute;
-  
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media (min-width: 576px) {
+  .AppHeader {
+    position: absolute;
+    top: 0;
 
-  width: 1629px;
-  max-width: 100%;
-  margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  padding: 40px 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
 
-  user-select: none;
+    user-select: none;
 
-  @media (max-width: 575px) {
+    &Logo {
+      margin-left: 89px;
+    }
+
+    nav.hiddenMobile {
+      display: flex;
+      align-items: center;
+      padding-right: 60px !important;
+
+      a {
+        margin-left: 28px;
+        font-size: 17px;
+        letter-spacing: 0.34px;
+        text-decoration: none;
+
+        color: #ffffff;
+        cursor: pointer;
+
+        &.active {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .AppHeader {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+
     width: 100%;
     overflow: hidden;
     padding: 20px;
-  }
+    padding-top: 56px;
 
-  &Logo {
-    @media (min-width: 576px) {
-      margin-left: 89px;
-    }
-    @media (max-width: 575px) {
+    user-select: none;
+
+    &Logo {
+      flex: 1;
+      padding-left: 23px;
+      text-align: center;
+
       img {
-        width: 150px;
+        max-width: 150px;
       }
     }
-  }
 
-  .mobileMenuBtn {
-    position: relative;
-    top: -3px;
+    .mobileMenuBtn {
+      position: relative;
+      top: -3px;
 
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 32px;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 32px;
 
-    cursor: pointer;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-
-    @media (max-width: 1680px) {
-      padding-right: 60px !important;
-    }
-
-    a {
-      margin-left: 28px;
-      font-size: 17px;
-      letter-spacing: 0.34px;
-      text-decoration: none;
-
-      color: #ffffff;
       cursor: pointer;
-
-      &.active {
-        opacity: 0.5;
-      }
     }
   }
 }

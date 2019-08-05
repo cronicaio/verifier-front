@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 import { VerifyForm } from '../../components/verify-form/verify-form.component';
 import { SearchResult } from '../../components/search-result/search-result.component';
 
-
 import Img_01 from '../../assets/Image_01@2x.png';
 import Img_02 from '../../assets/Image_02@2x.png';
 import Img_28 from '../../assets/Image_28@3x.png';
-
 
 import './home.page.scss';
 

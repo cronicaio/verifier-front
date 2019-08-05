@@ -1,7 +1,7 @@
 h1 {
   font-size: 50px;
   font-weight: 500;
-  color:white;
+  color: white;
 }
 
 h2 {
@@ -20,4 +20,14 @@ h4 {
   font-size: 28px;
   font-weight: 500;
   color: #0033cc;
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 41px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
 }
