@@ -26,6 +26,14 @@
   .HomeBlock {
     padding: 20px;
   }
+
+  .TempBlock {
+    color: #858a97;
+    
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
 @media (min-width: 576px) {

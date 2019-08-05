@@ -38,7 +38,7 @@ function Home({ match }) {
         <img src={Img_02} alt="" width="100%" />
       </section>
 
-      <section className="HomeBlock TempBlock textCenter hiddenMobile">
+      <section className="HomeBlock TempBlock textCenter">
         <div className="Flex">
           <div >
             <img src={Img_01} alt="" />
