@@ -49,9 +49,14 @@ function Footer() {
           <input type="text" placeholder="Email address" />
           <button type="button" className="button">Send</button>
         </div>
-        <img width="240px" src={Social} alt="" />
+        <div className="Social hiddenMobile">
+          <img width="240px" src={Social} alt="" />
+        </div>
       </div>
       <div className="Block Copyright">
+        <div className="Social hiddenDesktop">
+          <img width="240px" src={Social} alt="" />
+        </div>
         <span className="hiddenMobile">Terms of Use</span>
         <span className="hiddenMobile">Privacy Policy</span>
         <span className="hiddenMobile">Cookie Policy</span>
