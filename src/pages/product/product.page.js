@@ -10,16 +10,16 @@ function Product() {
   return (
     <section className="Page ProductPage">
       <header className="PageHeader">
-        <h1 className="text-center">
+        <h1 className="textCenter">
           Don't compromise for Security,
           <br />
           or Security For Convenience.
         </h1>
-        <h4 className="text-center">
+        <h4 className="textCenter">
           With Cronica, You Don't Have To.
         </h4>
       </header>
-      <section className="HomeBlock text-center">
+      <section className="HomeBlock textCenter">
         <p>
           <button type="button" className="button">START TODAY</button>
         </p>

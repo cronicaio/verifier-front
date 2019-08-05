@@ -1,0 +1,52 @@
+@media (max-width: 575px) {
+}
+
+@media (min-width: 576px) {
+  .ResultGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    border-radius: 10px;
+    border: solid 1px #e8ecf1;
+
+    padding: 50px;
+
+    .params__field {
+      overflow: hidden;
+
+      .params__key {
+        color: #a1a7b7;
+      }
+
+      .params__value {
+        color: #3d4461;
+
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.ResultDownload {
+  margin-top: 30px;
+  overflow: hidden;
+
+  .mgrpdf__wrapper {
+    margin-top: 60px;
+    border-radius: 10px;
+    border: solid 1px #e8ecf1;
+  }
+
+  .mgrpdf-navigation {
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    color: #3d4461 !important;
+    background-color: #e8ecf1 !important;
+  }
+}

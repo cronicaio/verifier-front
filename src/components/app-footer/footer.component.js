@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer className="AppFooter">
       <div className="Grid">
-        <div className="Verified">
+        <div className="Verified hiddenMobile">
           <img src={Home5} alt="Verified" />
         </div>
         <div>

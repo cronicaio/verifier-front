@@ -1,12 +1,13 @@
 import axios from 'axios';
 import qs from 'qs';
 
-let BASE_URL = `https://api-${window.location.hostname}`;
+const testID = process.env.NODE_ENV === 'development'
+  ? '0x24d9cb3d855fa04b047e56c8398ef3c4c48321bf02848dedb7e1f7fb6359284936eecaa211cef53d'
+  : '';
 
-
-if (process.env.NODE_ENV === 'development') {
-  BASE_URL = 'https://api-verify.b1.cronica.pro';
-}
+const BASE_URL = process.env.NODE_ENV === 'development'
+  ? 'https://api-verify.b1.cronica.pro'
+  : `https://api-${window.location.hostname}`;
 
 const get = (path, token) => {
   const headers = {
@@ -87,5 +88,6 @@ export const Api = {
   put,
   deleteReq,
   postFormData,
-  BASE_URL
+  BASE_URL,
+  testID
 };

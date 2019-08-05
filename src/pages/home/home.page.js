@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { Link } from "react-router-dom";
 
-import PDFViewer from 'mgr-pdf-viewer-react';
+import { VerifyForm } from '../../components/verify-form/verify-form.component';
+import { SearchResult } from '../../components/search-result/search-result.component';
 
-import { Api } from '../../services/api';
 
 import Img_01 from '../../assets/Image_01@2x.png';
 import Img_02 from '../../assets/Image_02@2x.png';
@@ -12,149 +12,35 @@ import Img_28 from '../../assets/Image_28@3x.png';
 
 import './home.page.scss';
 
-function Home(args) {
-
-  const useScroll = () => {
-    const ref = useRef(null);
-    const htmlElementAttributes = { ref };
-    const executeScroll = () => { window.scrollTo(0, ref.current.offsetTop); }
-
-    return [executeScroll, htmlElementAttributes];
-  }
-
-  const testID = process.env.NODE_ENV === 'development' 
-    ? '0x24d9cb3d855fa04b047e56c8398ef3c4c48321bf02848dedb7e1f7fb6359284936eecaa211cef53d' 
-    : '';
-
-  let documentId = args.match.params.id !== undefined ? args.match.params.id : testID;
-
-  const [isLoading, setLoading] = useState(false);
-  const [documentID, setDocumentID] = useState(documentId); 
+function Home({ match }) {
   const [result, setResult] = useState(null);
-
   const [executeScroll, scrollHtmlAttributes] = useScroll();
-
-  const formatDate = (timestamp) => {
-    return new Date(timestamp).toLocaleDateString();
-  }
-
-  const handleVerify = () => {
-    if (!documentID)
-      return;
-
-    setLoading(true);
-
-    Api.post(`v1/document/`, { documentID })
-      .then(response => {
-        setResult({ ...response.data, documentLink: Api.BASE_URL + '/v1/pdf/' + response.data.uuid});
-        setDocumentID('');
-        executeScroll();
-      })
-      .catch(error => {
-        console.log(error.response);
-        error.response && error.response.data.message && alert(error.response.data.message);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }
 
   return (
     <section className="Page">
       <header className="PageHeader">
-        <h1 className="text-center">
+        <h1 className="textCenter">
           Document Verification
         </h1>
-        <h4 className="text-center">
+        <h4 className="textCenter">
           Instant document verification
         </h4>
-        <div className="Email-opt-in">
-          <input type="text" placeholder="Please enter your Document ID" 
-                 value={documentID} 
-                 onChange={event => setDocumentID(event.target.value)} />
-          <button type="button" className="button" onClick={handleVerify} disabled={isLoading}>Verify</button>
-        </div>
-        <div className="Or-choose-Document">
+        <VerifyForm onFetch={onFetch} params={match.params} />
+        <div className="Or-choose-Document textCenter">
           Or choose <Link to="/">Document Certificate JSON</Link> file
         </div>
       </header>
 
-      <section {...scrollHtmlAttributes}>
-        {!!result && (
-          <div className="HomeBlock TempBlock" >
-            <h2 className="text-center">Document Verified</h2>
-            <div className="ResultGrid">
-              <div className="params__field" >
-                <div className="params__key" > Issuer: </div>
-                <div className="params__value" > {result.issuerName} </div>
-              </div>
-              <div className="params__field" >
-                <div className="params__key" > Signature owner: </div>
-                <div className="params__value" > {result.organization} </div>
-              </div>
-              <div className="params__field" >
-                <div className="params__key" > Document Holder: </div>
-                <div className="params__value" > {result.recipientName} </div>
-              </div>
-              <div className="params__field" >
-                <div className="params__key" > Issue Date: </div>
-                <div className="params__value" > {formatDate(result.issueTimestamp)} </div>
-              </div>
-              <div className="params__field" >
-                <div className="params__key" > Expiry Date: </div>
-                <div className="params__value" > {result.expireTimestamp ? formatDate(result.expireTimestamp) : 'N/A'} </div>
-              </div>
-              {(!!result.isRevoked) && (
-                <div className="params__field" >
-                  <div className="params__key" > Status: </div>
-                  <div className="params__value red" > Revoked </div>
-                </div>
-              )}
-              {(!!result.verified) && (
-                <div className="params__field" >
-                  <div className="params__key" > Signature: </div>
-                  <div className="params__value green" > Verified </div>
-                </div>
-              )}
-              {(!result.verified) && (
-                <div className="params__field" >
-                  <div className="params__key" > Signature: </div>
-                  <div className="params__value red" > Not Verified </div>
-                </div>
-              )}
-              {!!result.expireTimestamp && !result.isRevoked && (result.expireTimestamp <= Date.now()) && (
-                <div className="params__field" >
-                  <div className="params__key" > Status: </div>
-                  <div className="params__value red" > Expired </div>
-                </div>
-              )}
-              <div className="params__field" >
-                <div className="params__key" > Document ID: </div>
-                <div className="params__value params__value_alt" > {result.documentId} </div>
-              </div>
-            </div>
-          
-            {result.documentLink && (
-              <div className="ResultDownload">
-                <p className="text-center">
-                  <a href={result.documentLink} className="button" target="_blank" rel="noopener noreferrer" download >↓ Download Document</a>
-                </p>
-                <PDFViewer document={{ url: result.documentLink }}  scale={1.5} />
-              </div>
-            )}
-
-          </div>
-        )}
+      <section  {...scrollHtmlAttributes}>
+        {!!result && <SearchResult document={result} className="HomeBlock TempBlock" />}
       </section>
 
-
-
-      <section className="HomeBlock Features text-center">
+      <section className="HomeBlock Features textCenter">
         <h2>Platform Features</h2>
         <img src={Img_02} alt="" width="100%" />
       </section>
 
-      <section className="HomeBlock TempBlock text-center">
+      <section className="HomeBlock TempBlock textCenter hiddenMobile">
         <div className="Flex">
           <div >
             <img src={Img_01} alt="" />
@@ -175,12 +61,25 @@ function Home(args) {
         </div>
       </section>
 
-      <section className="HomeBlock TempBlock text-center">
+      <section className="HomeBlock TempBlock textCenter hiddenMobile">
         <img src={Img_28} alt="" />
       </section>
 
     </section>
   );
+
+  function onFetch(document) {
+    setResult(document);
+    executeScroll();
+  }
+
+  function useScroll() {
+    const ref = useRef(null);
+    const htmlElementAttributes = { ref };
+    const executeScroll = () => { window.scrollTo(0, ref.current.offsetTop); }
+
+    return [executeScroll, htmlElementAttributes];
+  }
 }
 
 export { Home };

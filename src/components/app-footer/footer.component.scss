@@ -1,0 +1,144 @@
+.AppFooter {
+  padding-top: 72px;
+
+  @media (max-width: 575px) {
+    border-top: 1px solid #eee;
+    margin-top: 60px;
+    padding-top: 0px;
+  }
+
+  .Grid {
+    width: 860px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+
+    @media (max-width: 575px) {
+      width: 100%;
+      overflow: hidden;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 35px;
+      padding: 35px;
+    }
+
+    h5 {
+      color: #041865;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding: 18px 0;
+        font-size: 14px;
+        color: #858a97;
+
+        @media (max-width: 575px) {
+          padding: 10px 0;
+        }
+      }
+    }
+
+    .Verified {
+      margin-top: 30px;
+    }
+  }
+
+  .Block {
+    width: 860px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    @media (max-width: 575px) {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    font-size: 14px;
+    color: #858a97;
+  }
+
+  .Copyright {
+    @media (min-width: 576px) {
+      span {
+        margin-right: 50px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  .Subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 575px) {
+      display: block;
+      padding: 0 35px;
+
+      img {
+        margin-top: 60px;
+        width: 100%;
+      }
+    }
+  }
+
+  .Email-opt-in {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 576px) {
+      margin-left: -40px;
+    }
+
+    @media (max-width: 575px) {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    input {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.38px;
+      text-transform: uppercase;
+      width: 380px;
+      padding: 18px 30px;
+      border-radius: 32px;
+      background-color: white;
+      border: 1px solid #c9cfd6;
+      outline: none !important;
+
+      &::placeholder {
+        font-style: italic;
+        text-transform: none;
+      }
+
+      @media (max-width: 575px) {
+        width: 100%;
+        padding: 11px 30px;
+        font-size: 13px !important;
+      }
+    }
+    button {
+      position: absolute;
+      right: 6px;
+      padding: 15px 40px;
+      background-color: #2bc0ff;
+
+      @media (max-width: 575px) {
+        font-size: 10px !important;
+        padding: 11px 20px;
+        right: 3px;
+      }
+    }
+  }
+}

@@ -11,10 +11,9 @@ function Header() {
       <NavLink to="/">
         <img src={Logo} alt="cronica" />
       </NavLink>
-      <nav>
+      <nav className="hiddenMobile">
         <NavLink to="/" exact>Home</NavLink>
         <NavLink to="/product">Project</NavLink>
-        {/* <a href="#">Developers</a> */}
         <NavLink to="/contact">Contact Us</NavLink>
       </nav>
     </header>

@@ -1,17 +1,19 @@
 .button {
-  text-decoration: none;
+  padding: 20px 70px;
+
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.38px;
   text-transform: uppercase;
-
-  padding: 20px 70px;
+  text-decoration: none;
 
   color: white;
-  border-radius: 32px;
   background-color: #2bc0ff;
-  border: none;
-  outline: none !important;
+  
+  border: none !important;
+  border-radius: 32px;
+
+  box-shadow: none !important;
 
   cursor: pointer;
 

@@ -1,0 +1,23 @@
+.red {
+  color: darkred !important;
+}
+
+.green {
+  color: darkgreen !important;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.hiddenMobile {
+  @media (max-width: 575px) {
+    display: none !important;
+  }
+}
+
+.hiddenDesktop {
+  @media (min-width: 576px) {
+    display: none !important;
+  }
+}

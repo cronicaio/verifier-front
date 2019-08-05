@@ -14,7 +14,7 @@ function Cases() {
   return (
     <section className="Page CasesPage">
       <header className="PageHeader">
-        <h1 className="text-center">Use Cases</h1>
+        <h1 className="textCenter">Use Cases</h1>
       </header>
 
       <div className="CaseBlock">

@@ -1,0 +1,67 @@
+.AppHeader {
+  position: absolute;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 1629px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  padding: 40px 0;
+
+  user-select: none;
+
+  @media (max-width: 575px) {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  &Logo {
+    @media (min-width: 576px) {
+      margin-left: 89px;
+    }
+    @media (max-width: 575px) {
+      img {
+        width: 150px;
+      }
+    }
+  }
+
+  .mobileMenuBtn {
+    position: relative;
+    top: -3px;
+
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1680px) {
+      padding-right: 60px !important;
+    }
+
+    a {
+      margin-left: 28px;
+      font-size: 17px;
+      letter-spacing: 0.34px;
+      text-decoration: none;
+
+      color: #ffffff;
+      cursor: pointer;
+
+      &.active {
+        opacity: 0.5;
+      }
+    }
+  }
+}
