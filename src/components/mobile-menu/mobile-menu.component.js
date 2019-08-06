@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 
 import Logo from '../../assets/svg/logo.svg';
 
-import MenuIco1 from '../../assets/menu/1.png';
-import MenuIco2 from '../../assets/menu/2.png';
-import MenuIco3 from '../../assets/menu/3.png';
-import MenuIco4 from '../../assets/menu/4.png';
+import MenuIco1 from '../../assets/icons/Home.svg';
+import MenuIco2 from '../../assets/icons/Project.svg';
+import MenuIco3 from '../../assets/icons/Company.svg';
+import MenuIco4 from '../../assets/icons/Contacts.svg';
 
 import './mobile-menu.component.scss';
 

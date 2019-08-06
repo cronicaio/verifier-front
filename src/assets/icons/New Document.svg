@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150.289" height="150.289" viewBox="0 0 150.289 150.289">
+  <defs>
+    <filter id="Ellipse_367" x="0" y="0" width="150.289" height="150.289" filterUnits="userSpaceOnUse">
+      <feOffset dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="17.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="New_Document" data-name="New Document" transform="translate(18.242 -334.247)">
+    <g id="Verify-scroll-down" transform="translate(34.258 374.747)">
+      <g transform="matrix(1, 0, 0, 1, -52.5, -40.5)" filter="url(#Ellipse_367)">
+        <circle id="Ellipse_367-2" data-name="Ellipse 367" cx="22.645" cy="22.645" r="22.645" transform="translate(52.5 40.5)" fill="#fff"/>
+      </g>
+    </g>
+    <path id="Path_2397" data-name="Path 2397" d="M301.595,1474.106q-1.673-1.8-3.331-3.608a1.943,1.943,0,0,0-1.48-.679q-4.411-.006-8.819,0a1.627,1.627,0,0,0-1.628,1.84c0,2.7,0,15.623,0,16.682a1.666,1.666,0,0,0,1.749,1.905h12.47c1.116,0,1.741-.683,1.741-1.905,0-4.413,0-7.966,0-12.382A2.573,2.573,0,0,0,301.595,1474.106Zm-4.425,7.062h-2.095v2.091a.757.757,0,1,1-1.514,0v-2.091h-2.095a.759.759,0,1,1,0-1.518h2.095v-2.095a.757.757,0,0,1,1.514,0v2.095h2.095a.759.759,0,1,1,0,1.518Zm2.759-5.218h-2.042a1.769,1.769,0,0,1-1.765-1.765v-2.147a.759.759,0,0,1,1.518,0v2.147a.247.247,0,0,0,.247.247h2.042a.759.759,0,0,1,0,1.518Z" transform="translate(-236.874 -1082.503)" fill="#52a1ff" fill-rule="evenodd"/>
+  </g>
+</svg>

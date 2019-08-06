@@ -44,9 +44,13 @@
     border-radius: 30px;
     background-color: white;
 
+    box-shadow: 0 12px 35px 0 rgba(0, 0, 0, 0.16);
+
     img {
-      width: 32px;
-      height: 32px;
+      position: relative;
+      top: 12px;
+      //width: 32px;
+      // height: 32px;
     }
   }
 

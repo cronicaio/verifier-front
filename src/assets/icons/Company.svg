@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150.289" height="150.289" viewBox="0 0 150.289 150.289">
+  <defs>
+    <filter id="Ellipse_367" x="0" y="0" width="150.289" height="150.289" filterUnits="userSpaceOnUse">
+      <feOffset dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="17.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Comapny" transform="translate(-35.758 -302.247)">
+    <g id="Verify-scroll-down" transform="translate(88.258 342.747)">
+      <g transform="matrix(1, 0, 0, 1, -52.5, -40.5)" filter="url(#Ellipse_367)">
+        <circle id="Ellipse_367-2" data-name="Ellipse 367" cx="22.645" cy="22.645" r="22.645" transform="translate(52.5 40.5)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_700" data-name="Group 700" transform="translate(-2334.75 -205.651)">
+      <path id="building" d="M2447.143,573.893h-6.19a.775.775,0,1,1,0-1.55h6.19a.775.775,0,0,1,0,1.55Zm0-3.459h-6.19a.775.775,0,1,1,0-1.55h6.19a.775.775,0,0,1,0,1.55Zm0-3.459h-6.19a.775.775,0,1,1,0-1.549h6.19a.775.775,0,0,1,0,1.549Zm2.445-4.138h-.143V561.55a.772.772,0,0,0-.775-.775h-9.042a.774.774,0,0,0-.775.775v1.286h-.329a.774.774,0,0,0-.775.775v16.875a.775.775,0,0,0,.775.775h4.125v-4.25a.485.485,0,0,1,.484-.484h1.844a.484.484,0,0,1,.484.484v4.25h4.9v-17.65A.774.774,0,0,0,2449.588,562.836Z" fill="#52a1ff"/>
+      <path id="building-2" data-name="building" d="M2476.524,579.836h-.144V578.55a.772.772,0,0,0-.775-.775h-3.064v4.649h1.538a.775.775,0,0,1,0,1.55h-1.538v1.909h1.538a.775.775,0,0,1,0,1.549h-1.538v4.242h3.983a.775.775,0,0,0,.775-.775V580.611A.775.775,0,0,0,2476.524,579.836Z" transform="translate(-21.313 -10.414)" fill="#52a1ff"/>
+    </g>
+  </g>
+</svg>
