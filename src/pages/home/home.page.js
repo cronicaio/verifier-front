@@ -4,9 +4,16 @@ import { Link } from "react-router-dom";
 import { VerifyForm } from '../../components/verify-form/verify-form.component';
 import { SearchResult } from '../../components/search-result/search-result.component';
 
-import Img_01 from '../../assets/Image_01@2x.png';
-import Img_02 from '../../assets/Image_02@2x.png';
+import Img_01 from '../../assets/icons/Verify/Phone@2x.png';
 import Img_28 from '../../assets/Image_28@3x.png';
+
+import ImgFeatures1 from '../../assets/icons/Verify/Quorum-Blockchain.svg';
+import ImgFeatures2 from '../../assets/icons/Verify/Programable-Documents.svg';
+import ImgFeatures3 from '../../assets/icons/Verify/Smart-Contract.svg';
+import ImgFeatures4 from '../../assets/icons/Verify/Security.svg';
+import ImgFeatures5 from '../../assets/icons/Verify/Privacy.svg';
+import ImgFeatures6 from '../../assets/icons/Verify/API.svg';
+
 
 import './home.page.scss';
 
@@ -15,7 +22,7 @@ function Home({ match }) {
   const [executeScroll, scrollHtmlAttributes] = useScroll();
 
   return (
-    <section className="Page">
+    <section className="Page HomePage">
       <header className="PageHeader">
         <h1 className="textCenter">
           Document Verification
@@ -35,7 +42,44 @@ function Home({ match }) {
 
       <section className="HomeBlock Features textCenter">
         <h2>Platform Features</h2>
-        <img src={Img_02} alt="" width="100%" />
+        <div className="Grid">
+          <div>
+            <div className="FeaturesImgWrapper">
+              <img src={ImgFeatures1} alt="Quorum Blockchain" />
+            </div>
+            <h5>Quorum Blockchain</h5>
+          </div>
+          <div>
+            <div className="FeaturesImgWrapper">
+              <img src={ImgFeatures2} alt="Programable Documents" />
+            </div>
+            <h5>Programable Documents</h5>
+          </div>
+          <div>
+            <div className="FeaturesImgWrapper">
+              <img src={ImgFeatures3} alt="Smart Contract" />
+            </div>
+            <h5>Smart Contract</h5>
+          </div>
+          <div>
+            <div className="FeaturesImgWrapper">
+              <img src={ImgFeatures4} alt="Security" />
+            </div>
+            <h5>Security</h5>
+          </div>
+          <div>
+            <div className="FeaturesImgWrapper">
+              <img src={ImgFeatures5} alt="Privacy" />
+            </div>
+            <h5>Privacy</h5>
+          </div>
+          <div>
+            <div className="FeaturesImgWrapper">
+              <img src={ImgFeatures6} alt="API" />
+            </div>
+            <h5>API</h5>
+          </div>
+        </div>
       </section>
 
       <section className="HomeBlock TempBlock textCenter">

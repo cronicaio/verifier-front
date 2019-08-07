@@ -12,7 +12,7 @@ function Product() {
       <header className="PageHeader">
         <h1 className="textCenter">
           Don't compromise for Security,
-          <br />
+          <br className="hiddenMobile" />
           or Security For Convenience.
         </h1>
         <h4 className="textCenter">
