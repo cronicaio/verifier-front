@@ -13,6 +13,8 @@
 
     user-select: none;
 
+    z-index: 5;
+
     &Logo {
       margin-left: 89px;
     }
@@ -52,6 +54,8 @@
     padding-top: 56px;
 
     user-select: none;
+
+    z-index: 5;
 
     &Logo {
       flex: 1;
