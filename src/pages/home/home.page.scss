@@ -1,11 +1,28 @@
 @media (min-width: 576px) {
   .HomePage {
     .PageHeader {
-      height: 916px;
-      background-image: linear-gradient(225deg, #000ecc, #4ea7ff);
+      position: relative;
 
-      margin-top: -91px;
+      height: 916px;
+
+      background-image: url(../../assets/icons/Verify/verify-header-bg.svg) !important;
+      background-position-y: top !important;
+
       padding-top: 91px;
+
+      &Arrow {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        margin-left: -100px;
+
+        width: 200px;
+        height: 200px;
+
+        background-image: url(../../assets/icons/Verify/Verify-scroll-down.svg);
+        background-position: center center;
+        background-size: contain;
+      }
 
       h1 {
         margin-top: 200px;
@@ -108,8 +125,26 @@
 @media (max-width: 575px) {
   .HomePage {
     .PageHeader {
+      position: relative;
       padding-top: 91px;
       height: 630px;
+
+      background-image: url(../../assets/icons/Verify/verify-header-bg.svg) !important;
+      background-position-y: top !important;
+
+      &Arrow {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        margin-left: -80px;
+
+        width: 160px;
+        height: 160px;
+
+        background-image: url(../../assets/icons/Verify/Verify-scroll-down.svg);
+        background-position: center center;
+        background-size: contain;
+      }
 
       h1 {
         font-size: 41px;

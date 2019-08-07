@@ -34,6 +34,7 @@ function Home({ match }) {
         <div className="Or-choose-Document textCenter">
           Or choose <Link to="/">Document Certificate JSON</Link> file
         </div>
+        <div className="PageHeaderArrow"></div>
       </header>
 
       <section  {...scrollHtmlAttributes}>

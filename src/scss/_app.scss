@@ -1,7 +1,10 @@
 .App {
   .PageHeader {
     background-image: url('assets/pageHeader@2x.png');
+    
+    background-position-x: center;
     background-position-y: bottom;
+
     background-repeat: no-repeat;
     background-size: cover;
 
