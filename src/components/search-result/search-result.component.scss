@@ -1,4 +1,39 @@
 @media (max-width: 575px) {
+  .ResultGrid {
+    padding: 20px;
+    .params__field {
+      margin-bottom: 20px;
+      .params__key {
+        opacity: 0.5;
+      }
+      .params__value {
+        opacity: 0.75;
+
+        &.params__value_alt {
+          width: 99%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+  .ResultDownload {
+    overflow: visible !important;
+    
+  }
+  .mgrpdf__wrapper {
+    margin: 20px;
+    border-radius: 3px !important;
+
+    canvas {
+      widows: 100%;
+      height: auto;
+    }
+  }
+  .mgrpdf-navigation {
+    border-bottom-left-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+  }
 }
 
 @media (min-width: 576px) {
