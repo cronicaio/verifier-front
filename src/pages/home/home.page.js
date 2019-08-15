@@ -32,7 +32,7 @@ function Home({ match }) {
         </h4>
         <VerifyForm onFetch={onFetch} params={match.params} />
         <div className="Or-choose-Document textCenter">
-          Or choose <Link to="/">Document Certificate JSON</Link> file
+          Or choose <span className="link" onClick={temp}>Document Certificate JSON</span> file
         </div>
         <div className="PageHeaderArrow"></div>
       </header>
@@ -110,6 +110,10 @@ function Home({ match }) {
 
     </section>
   );
+
+  function temp() {
+    
+  }
 
   function onFetch(document) {
     setResult(document);
