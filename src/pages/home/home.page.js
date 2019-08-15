@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { Link } from "react-router-dom";
 
 import { VerifyForm } from '../../components/verify-form/verify-form.component';
 import { SearchResult } from '../../components/search-result/search-result.component';
+
+import { Api } from '../../services/api';
 
 import Img_01 from '../../assets/icons/Verify/Phone@2x.png';
 import Img_28 from '../../assets/Image_28@3x.png';
@@ -32,7 +33,8 @@ function Home({ match }) {
         </h4>
         <VerifyForm onFetch={onFetch} params={match.params} />
         <div className="Or-choose-Document textCenter">
-          Or choose <span className="link" onClick={temp}>Document Certificate JSON</span> file
+          Or choose <span className="link" onClick={onButtonLoadClick}>Document Certificate JSON</span> file
+          <input type="file" id="input-file" accept=".json" onChange={onFileUpload} />
         </div>
         <div className="PageHeaderArrow"></div>
       </header>
@@ -111,8 +113,25 @@ function Home({ match }) {
     </section>
   );
 
-  function temp() {
-    
+  function onButtonLoadClick() {
+    document.getElementById('input-file').click();
+  }
+
+  function onFileUpload(evt) {
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      try {
+        const json = JSON.parse(reader.result);
+        Api.post('v1/document/search-by-json', { ...json })
+          .then((response) => { setResult(response.data) })
+          .catch(console.log);
+      } catch (error) {
+        alert('exeption when trying to parse json = ' + error);
+      }
+    }
+
+    reader.readAsText(evt.target.files[0]);
   }
 
   function onFetch(document) {
