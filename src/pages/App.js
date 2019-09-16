@@ -6,6 +6,7 @@ import { Header } from '../components/app-header/header.component';
 import { Footer } from '../components/app-footer/footer.component';
 
 import { Home } from './home/home.page';
+import { Result } from './result/result.page';
 import { Product } from './product/product.page';
 import { Cases } from './cases/cases.page';
 import { Contact } from './contact/contact.page';
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/product" component={Product} />
         <Route exact path="/cases" component={Cases} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/result" component={Result} />
         <Footer />
       </Router>
     </section>
