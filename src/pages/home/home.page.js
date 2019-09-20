@@ -5,6 +5,7 @@ import { SearchResult } from '../../components/search-result/search-result.compo
 
 import { Api } from '../../services/api';
 
+
 import Img_01 from '../../assets/icons/Verify/Phone@2x.png';
 import Img_28 from '../../assets/Image_28@3x.png';
 

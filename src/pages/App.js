@@ -12,18 +12,19 @@ import { Cases } from './cases/cases.page';
 import { Contact } from './contact/contact.page';
 
 function App() {
+  const isMainPage = (/searchBy/g).test(window.location.hash);
+
   return (
     <section className="App">
       <Router>
-        <Header />
+        {!isMainPage && <Header />}
         <Route exact path="/" component={Home} />
-        <Route path="/searchByIdStructured/:id" component={Home}/>
-        <Route path="/searchByIdNonStructured/:id" component={Home}/>
+        <Route path="/searchByIdStructured/:id" component={Result}/>
+        <Route path="/searchByIdNonStructured/:id" component={Result}/>
         <Route exact path="/product" component={Product} />
         <Route exact path="/cases" component={Cases} />
         <Route exact path="/contact" component={Contact} />
-        <Route exact path="/result" component={Result} />
-        <Footer />
+        {!isMainPage && <Footer />}
       </Router>
     </section>
   );
