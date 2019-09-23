@@ -1,6 +1,8 @@
 @media (max-width: 575px) {
   .ResultGrid {
     padding: 20px;
+    text-align: left;
+
     .params__field {
       margin-bottom: 20px;
       .params__key {
@@ -45,8 +47,12 @@
 
     border-radius: 10px;
     border: solid 1px #e8ecf1;
+    background-color: white;
 
     padding: 50px;
+    margin: 0 80px;
+
+    text-align: left;
 
     .params__field {
       overflow: hidden;
@@ -64,11 +70,44 @@
       }
     }
   }
+
+  .SearchResult {
+    margin-top: 160px;
+    padding-bottom: 80px;
+
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(38, 55, 72, 0.1);
+    background-color: white;
+
+    text-align: center;
+
+    background-image: url('../../assets/svg/bg-verified.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: -250px;
+
+    &Img {
+      display: inline-block;
+      margin-top: -80px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .ResultDownload {
   margin-top: 30px;
   overflow: hidden;
+  margin-bottom: 60px;
+
+  
+
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    
+  }
 
   .mgrpdf__wrapper {
     margin-top: 60px;

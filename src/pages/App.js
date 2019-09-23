@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import { HashRouter as Router, Route } from "react-router-dom";
 
 import { Header } from '../components/app-header/header.component';
@@ -12,19 +11,17 @@ import { Cases } from './cases/cases.page';
 import { Contact } from './contact/contact.page';
 
 function App() {
-  const isMainPage = (/searchBy/g).test(window.location.hash);
-
   return (
     <section className="App">
       <Router>
-        {!isMainPage && <Header />}
+        <Header />
         <Route exact path="/" component={Home} />
         <Route path="/searchByIdStructured/:id" component={Result}/>
         <Route path="/searchByIdNonStructured/:id" component={Result}/>
         <Route exact path="/product" component={Product} />
         <Route exact path="/cases" component={Cases} />
         <Route exact path="/contact" component={Contact} />
-        {!isMainPage && <Footer />}
+        <Footer />
       </Router>
     </section>
   );

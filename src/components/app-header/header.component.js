@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
+import useReactRouter from 'use-react-router';
 
 import { MobileMenu } from '../mobile-menu/mobile-menu.component';
 
@@ -9,6 +10,10 @@ import Logo from '../../assets/svg/logo.svg';
 
 function Header() {
   const [isMenuActive, setMenuActive] = useState(false);
+  const { location } = useReactRouter();
+
+  if ((/searchBy/g).test(location.pathname))
+    return (<div></div>);
 
   return (
     <header className="AppHeader">

@@ -7,8 +7,6 @@ import './verify-form.component.scss';
 function VerifyForm(props) {
 
   const initialID = props.params && (props.params.id !== undefined) ? props.params.id : Api.testID;
-
-  const [isLoading, setLoading] = useState(false);
   const [documentID, setDocumentID] = useState(initialID); 
 
   return (
@@ -16,7 +14,7 @@ function VerifyForm(props) {
       <input type="text" placeholder="Please enter your Document ID"
         value={documentID}
         onChange={event => setDocumentID(event.target.value)} />
-      <button type="button" className="button" onClick={handleVerify} disabled={isLoading}>Verify</button>
+      <button type="button" className="button" onClick={handleVerify} >Verify</button>
     </section>
   );  
 
@@ -25,26 +23,6 @@ function VerifyForm(props) {
       return;
 
     window.location.hash = '#/searchByIdStructured/' + documentID;
-
-    //props.history.push("/overview");
-    console.log(props)
-
-    return;
-
-    setLoading(true);
-
-    Api.post(`v1/document/`, { documentID })
-      .then(response => {
-        setDocumentID('');
-        // onFetch({ ...response.data, documentLink: Api.BASE_URL + '/v1/pdf/' + response.data.uuid });
-      })
-      .catch(error => {
-        error.response && error.response.data.message && alert(error.response.data.message);
-        !error.response && alert('Unknown server error');
-      })
-      .finally(() => {
-        setLoading(false);
-      });
   }
 }
 

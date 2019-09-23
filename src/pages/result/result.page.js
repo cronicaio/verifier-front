@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from '../../components/v-header/Header';
 import { SearchResult } from '../../components/search-result/search-result.component';
 
 import { Api } from '../../services/api';
+
 
 import './result.page.scss';
 
@@ -14,7 +15,9 @@ const Result = (props) => {
 
   console.log(documentID)
 
-  handleVerify(documentID);
+  useEffect(() => handleVerify(documentID), [documentID]);
+
+  // handleVerify(documentID);
 
   return (
     <section className="Page ResultPage">
