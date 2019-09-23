@@ -13,11 +13,9 @@ const Result = (props) => {
   const [result, setResult] = useState(null);
   const documentID = props.match.params.id;
 
-  console.log(documentID)
+  // console.log(documentID)
 
   useEffect(() => handleVerify(documentID), [documentID]);
-
-  // handleVerify(documentID);
 
   return (
     <section className="Page ResultPage">

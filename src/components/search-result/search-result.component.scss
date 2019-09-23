@@ -1,15 +1,28 @@
 @media (max-width: 575px) {
   .ResultGrid {
-    padding: 20px;
+    // padding: 20px;
     text-align: left;
 
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+
+    margin: 0 30px;
+
     .params__field {
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
+      overflow: hidden;
+      border-bottom: 1px solid #DFDFDF;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
       .params__key {
         opacity: 0.5;
+        padding: 10px;
       }
       .params__value {
         opacity: 0.75;
+        padding: 10px;
 
         &.params__value_alt {
           width: 99%;

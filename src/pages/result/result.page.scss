@@ -1,15 +1,29 @@
-.ResultBlock {
-  color: black;
-  
-
-  width: 1180px;
-  margin: 0 auto;
-
-  h1 {
-    color: #041865;
+@media (max-width: 575px) {
+  .SearchResultImg {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .mgrpdf__wrapper {
+    display: none;
   }
 }
 
-.ResultPage {
-  background-color: #fcfdfe;
+@media (min-width: 576px) {
+  .ResultBlock {
+    color: black;
+
+    width: 1180px;
+    margin: 0 auto;
+
+    h1 {
+      color: #041865;
+    }
+  }
+
+  .ResultPage {
+    background-color: #fcfdfe;
+  }
+
+  
 }

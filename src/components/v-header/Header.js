@@ -17,15 +17,8 @@ class Header extends Component {
     isMainPage: false
   };
 
-  componentDidUpdate(prevProps) {
-    // if (this.props.location !== prevProps.location) {
-    //   this.setState({ isMainPage: this.props.location.pathname === this.mainPagePath });
-    // }
-  }
-
   render() {
     const username = '';
-    // const { username } = this.context.user;
 
     return (
       <header className="app-header header navbar">

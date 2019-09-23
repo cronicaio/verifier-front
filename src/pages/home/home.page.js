@@ -125,7 +125,9 @@ function Home({ match }) {
       try {
         const json = JSON.parse(reader.result);
         Api.post('v1/document/search-by-json', { ...json })
-          .then((response) => { setResult(response.data) })
+          .then((response) => { 
+            window.location.hash = '#/searchByIdStructured/' + response.data.documentId;
+          })
           .catch(console.log);
       } catch (error) {
         alert('exeption when trying to parse json = ' + error);

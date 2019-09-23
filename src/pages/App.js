@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HashRouter as Router, Route } from "react-router-dom";
 
 import { Header } from '../components/app-header/header.component';
