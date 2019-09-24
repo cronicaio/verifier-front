@@ -28,10 +28,10 @@ class Header extends Component {
           </span>
           <span className="navbar-wrapper">
           <Link to="/" className="navbar-brand"></Link>
-          <span className="header__searchField hiddenMobile">
+          {/* <span className="header__searchField hiddenMobile">
             <input type="text" />
             <FontAwesomeIcon icon={faSearch} />
-          </span>
+          </span> */}
           </span>
           <span className="header__menuBtn hiddenDesktop">
             <FontAwesomeIcon icon={faBars} onClick={this.toggleMobileMenu} />
@@ -40,7 +40,7 @@ class Header extends Component {
             <span className="header__menuBtn hiddenDesktop menuClose">
               <FontAwesomeIcon icon={faTimes} onClick={this.toggleMobileMenu} />
             </span>
-            <Link className="header__link" to="/" onClick={this.closeMobileMenu}>
+            {/* <Link className="header__link" to="/" onClick={this.closeMobileMenu}>
               <i><FontAwesomeIcon icon={faUser} /></i>
               <span>Users</span>
             </Link>
@@ -55,7 +55,7 @@ class Header extends Component {
             <div className="header__link" onClick={this.onSignout}>
               <i><FontAwesomeIcon icon={faSignOutAlt} /></i>
               <span>Log Out</span>
-            </div>
+            </div> */}
             <Link className="header__link ProfileLink hiddenDesktop" to="/explorer/profile" onClick={this.closeMobileMenu}>
               <i><FontAwesomeIcon icon={faCogs} /></i>
               <span>{username}</span>
