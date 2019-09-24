@@ -9,7 +9,7 @@ function SearchResult({ document }) {
   return (
     <section>
       <section className="SearchResult">
-        <img src={Img_verified} className="SearchResultImg" alt="verified" />
+        <img src={Img_verified} className="SearchResultImg" alt="verified"/>
         <h2 className="textCenter">Document Verified</h2>
 
         {document.documentLink && (
