@@ -2,7 +2,7 @@ import axios from 'axios';
 import qs from 'qs';
 
 const testID = process.env.NODE_ENV === 'development'
-  ? '0xce78524682be8ce78b9a417b63948cfbe1462a8cc23722ccb39d5610306bc746f05fc8b3aee8dd31'
+  ? ''
   : '';
 
 const BASE_URL = process.env.NODE_ENV === 'development'
