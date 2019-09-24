@@ -41,8 +41,8 @@
     border-radius: 3px !important;
 
     canvas {
-      widows: 100%;
-      height: auto;
+      width: 100% !important;
+      height: auto  !important;
     }
   }
   .mgrpdf-navigation {
