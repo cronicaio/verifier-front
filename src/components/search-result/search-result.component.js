@@ -2,7 +2,6 @@ import React from 'react';
 import PDFViewer from 'mgr-pdf-viewer-react';
 
 import Img_verified from '../../assets/svg/verified.svg';
-import Img_verified2 from '../../assets/svg/verified_old.svg';
 
 import './search-result.component.scss';
 
@@ -10,8 +9,7 @@ function SearchResult({ document }) {
   return (
     <section>
       <section className="SearchResult">
-        <img src={Img_verified} className="SearchResultImg hiddenDesktop" alt="verified" />
-        <img src={Img_verified2} className="SearchResultImg hiddenMobile" alt="verified" />
+        <img src={Img_verified} className="SearchResultImg" alt="verified" />
         <h2 className="textCenter">Document Verified</h2>
 
         {document.documentLink && (
