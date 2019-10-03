@@ -33,10 +33,10 @@ function Home({ match }) {
           Instant document verification
         </h4>
         <VerifyForm onFetch={onFetch} params={match.params} />
-        <div className="Or-choose-Document textCenter">
+        {/* <div className="Or-choose-Document textCenter">
           Or choose <span className="link" onClick={onButtonLoadClick}>Document Certificate JSON</span> file
           <input type="file" id="input-file" accept=".json" onChange={onFileUpload} />
-        </div>
+        </div> */}
         <div className="PageHeaderArrow"></div>
       </header>
 

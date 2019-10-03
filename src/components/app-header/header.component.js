@@ -6,7 +6,7 @@ import { MobileMenu } from '../mobile-menu/mobile-menu.component';
 
 import './header.component.scss';
 
-import Logo from '../../assets/svg/logo.svg';
+import Logo from '../../assets/svg/logo_ua.svg';
 
 function Header() {
   const [isMenuActive, setMenuActive] = useState(false);
