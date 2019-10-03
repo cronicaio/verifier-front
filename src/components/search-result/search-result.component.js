@@ -18,6 +18,7 @@ function SearchResult({ document }) {
               <a href={document.documentLink} className="button" target="_blank" rel="noopener noreferrer" download >↓ Download Document</a>
             </div>
           </div>
+          
         )}
 
         <div className="ResultGrid">
@@ -69,7 +70,15 @@ function SearchResult({ document }) {
             <div className="params__key"> Document ID: </div>
             <div className="params__value params__value_alt"> {document.documentId} </div>
           </div>
-        </div>
+          </div>
+          {document.documentLink && (
+          <div className="ResultDownload">
+            <div className="textCenter">
+              <a href={document.etherscanLink} className="button" target="_blank" rel="noopener noreferrer" >View on Etherscan</a>
+            </div>
+          </div>
+          
+        )}
       </section>
       {
         document.documentLink && (
