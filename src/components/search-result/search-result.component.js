@@ -74,7 +74,7 @@ function SearchResult({ document }) {
           {document.documentLink && (
           <div className="ResultDownload">
             <div className="textCenter">
-              <a href={document.etherscanLink} className="button" target="_blank" rel="noopener noreferrer" >View on Etherscan</a>
+              <a href={document.blockscoutLink} className="button" target="_blank" rel="noopener noreferrer" >View on Explorer</a>
             </div>
           </div>
           
