@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
-import Logo from '../../assets/svg/logo_ua.svg';
+import Logo from '../../assets/svg/logo.svg';
 
 import MenuIco1 from '../../assets/icons/Home.svg';
 import MenuIco2 from '../../assets/icons/Project.svg';
