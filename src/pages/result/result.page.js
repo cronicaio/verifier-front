@@ -5,6 +5,7 @@ import { SearchResult } from '../../components/search-result/search-result.compo
 
 import { Api } from '../../services/api';
 
+import Img_notfound from '../../assets/svg/revoked.svg';
 
 import './result.page.scss';
 
@@ -23,7 +24,12 @@ const Result = (props) => {
       <section>
         <div className="ResultBlock">
           {!!result && <SearchResult document={result} className="HomeBlock TempBlock" />}
-          {!result && <div></div>}
+          {!result && <div className="HomeBlock TempBlock">
+          <div classname="SearchResult">
+            <img src={Img_notfound} className="SearchResultImg" alt="revoked"/>
+            <h2 className="textCenter">Document Not Found</h2>
+          </div>
+          </div>}
         </div>
       </section>
     </section>
