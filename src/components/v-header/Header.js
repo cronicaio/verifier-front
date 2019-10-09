@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faSignOutAlt, faLifeRing, faUser, faArrowLeft, faBars, faTimes, faCogs, faGhost } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faBars, faTimes, faCogs } from '@fortawesome/free-solid-svg-icons'
 
 import './Header.scss';
 

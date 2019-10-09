@@ -10,25 +10,18 @@ function SearchResult({ document }) {
   return (
     <section>
       <section className="SearchResult">
-        
-{(!!document.message) && (
-  <img src={Img_revoked} className="SearchResultImg" alt="revoked"/>
-)}
-{(!!document.message) && (
-<h2 className="textCenter">Document Not Found</h2>
-)}        
-{(!!document.isRevoked) && (
-  <img src={Img_revoked} className="SearchResultImg" alt="revoked"/>
-)}
-{(!!document.isRevoked) && (
-<h2 className="textCenter">Document Revoked</h2>
-)}
-{(!document.isRevoked) && (
-  <img src={Img_verified} className="SearchResultImg" alt="verified"/>
-  )}
-  {(!document.isRevoked) && (
-  <h2 className="textCenter">Document Verified</h2>
-  )}
+        {(!!document.isRevoked) && (
+          <img src={Img_revoked} className="SearchResultImg" alt="revoked" />
+        )}
+        {(!!document.isRevoked) && (
+          <h2 className="textCenter">Document Revoked</h2>
+        )}
+        {(!document.isRevoked) && (
+          <img src={Img_verified} className="SearchResultImg" alt="verified" />
+        )}
+        {(!document.isRevoked) && (
+          <h2 className="textCenter">Document Verified</h2>
+        )}
         {document.documentLink && !document.isRevoked && (
           <div className="ResultDownload">
             <div className="textCenter">

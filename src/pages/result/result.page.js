@@ -2,16 +2,19 @@ import React, { useState, useEffect } from 'react';
 
 import Header from '../../components/v-header/Header';
 import { SearchResult } from '../../components/search-result/search-result.component';
+import { SearchResultNotFound } from '../../components/search-result/search-not-found.component';
 
 import { Api } from '../../services/api';
 
-import Img_notfound from '../../assets/svg/revoked.svg';
+
 
 import './result.page.scss';
 
 
 const Result = (props) => {
   const [result, setResult] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const documentID = props.match.params.id;
 
   // console.log(documentID)
@@ -24,12 +27,7 @@ const Result = (props) => {
       <section>
         <div className="ResultBlock">
           {!!result && <SearchResult document={result} className="HomeBlock TempBlock" />}
-          {!result && <div className="HomeBlock TempBlock">
-          <div classname="SearchResult">
-            <img src={Img_notfound} className="SearchResultImg" alt="revoked"/>
-            <h2 className="textCenter">Document Not Found</h2>
-          </div>
-          </div>}
+          {!result && <SearchResultNotFound errorMessage={errorMessage} className="HomeBlock TempBlock" />}
         </div>
       </section>
     </section>
@@ -44,8 +42,11 @@ const Result = (props) => {
         setResult({ ...response.data, documentLink: Api.BASE_URL + '/v1/pdf/' + response.data.uuid });
       })
       .catch(error => {
-        error.response && error.response.data.message && alert(error.response.data.message);
-        !error.response && alert('Unknown server error');
+        console.log( error.response)
+        const errorMessage = error.response && error.response.data.message
+          ? error.response.data.message
+          : 'Unknown server error';
+        setErrorMessage(errorMessage);
       });
   }
 }
