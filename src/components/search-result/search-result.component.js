@@ -2,6 +2,7 @@ import React from 'react';
 import PDFViewer from 'mgr-pdf-viewer-react';
 
 import Img_verified from '../../assets/svg/verified.svg';
+import Img_revoked from '../../assets/svg/revoked.svg';
 
 import './search-result.component.scss';
 
@@ -9,10 +10,26 @@ function SearchResult({ document }) {
   return (
     <section>
       <section className="SearchResult">
-        <img src={Img_verified} className="SearchResultImg" alt="verified"/>
-        <h2 className="textCenter">Document Verified</h2>
-
-        {document.documentLink && (
+        
+{(!!document.message) && (
+  <img src={Img_revoked} className="SearchResultImg" alt="revoked"/>
+)}
+{(!!document.message) && (
+<h2 className="textCenter">Document Not Found</h2>
+)}        
+{(!!document.isRevoked) && (
+  <img src={Img_revoked} className="SearchResultImg" alt="revoked"/>
+)}
+{(!!document.isRevoked) && (
+<h2 className="textCenter">Document Revoked</h2>
+)}
+{(!document.isRevoked) && (
+  <img src={Img_verified} className="SearchResultImg" alt="verified"/>
+  )}
+  {(!document.isRevoked) && (
+  <h2 className="textCenter">Document Verified</h2>
+  )}
+        {document.documentLink && !document.isRevoked && (
           <div className="ResultDownload">
             <div className="textCenter">
               <a href={document.documentLink} className="button" target="_blank" rel="noopener noreferrer" download >↓ Download Document</a>
@@ -72,7 +89,7 @@ function SearchResult({ document }) {
         </div>
       </section>
       {
-        document.documentLink && (
+        !document.isRevoked && document.documentLink && (
           <div className="ResultDownload">
             <PDFViewer document={{ url: document.documentLink }} scale={1.5} />
           </div>
