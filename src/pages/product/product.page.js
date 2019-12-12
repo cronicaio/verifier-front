@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
 import './product.page.scss';
 
@@ -6,52 +7,46 @@ import Product1 from '../../assets/product1.png';
 import Product2 from '../../assets/product2.png';
 
 
-function Product() {
+function Product({ t }) {
   return (
     <section className="Page ProductPage">
       <header className="PageHeader">
         <h1 className="textCenter">
-          Don't compromise for Security,
+          {t("Don't compromise for Security,")}
           <br className="hiddenMobile" />
-          or Security For Convenience.
+          {t('or Security For Convenience')}
         </h1>
         <h4 className="textCenter">
-          With Cronica, You Don't Have To.
+          {t("With Cronica, You Don't Have To")}
         </h4>
       </header>
       <section className="HomeBlock textCenter">
         <p>
-          <button type="button" className="button">START TODAY</button>
+          <button type="button" className="button">{t('START TODAY')}</button>
         </p>
-        <h2>Why Cronica?</h2>
+        <h2>{t('Why Cronica?')}</h2>
         <p>
-          Our lives and identities are coordinated digitally, online.
-          We need a document authentication solution that is as easy as a website,
-          but as secure as a physical vault.
+          {t('Our lives and identities')}
         </p>
         <p>
           <img width="100%" src={Product1} alt="" />
         </p>
         <p>
-          Cronica is the first document authentication solution to use blockchain technology.
-          By separating document data from document representation, Cronica makes it
-          possible to issue and verify critical documents without requiring human
-          intermediaries to read sensitive data or handle physical documents.
+          {t('Cronica is the first document')}
         </p>
         <p>
-          Only the document required for authentication is stored – securely,
-          in machine-readable form – on the blockchain.
+          {t('Only the document')}
         </p>
         <h4>
-          A Platform That Protects Document Data,
+          {t('A Platform That Protects Document Data')}
           <br />
-          And Makes Authentication Simple
+          {t('And Makes Authentication Simple')}
         </h4>
         <p>
           <img width="100%" src={Product2} alt="" />
         </p>
         <p>
-          <button type="button" className="button">DOWNLOAD OUR PRESENTATION</button>
+          <button type="button" className="button">{t('DOWNLOAD OUR PRESENTATION')}</button>
         </p>
       </section>
 
@@ -59,4 +54,4 @@ function Product() {
   );
 }
 
-export { Product };
+export default withTranslation()(Product);

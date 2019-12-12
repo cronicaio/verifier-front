@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
+import { withTranslation } from 'react-i18next';
 
-import { VerifyForm } from '../../components/verify-form/verify-form.component';
-import { SearchResult } from '../../components/search-result/search-result.component';
+import VerifyForm from '../../components/verify-form/verify-form.component';
+import SearchResult from '../../components/search-result/search-result.component';
 
 import { Api } from '../../services/api';
 
@@ -19,7 +20,7 @@ import ImgFeatures6 from '../../assets/icons/Verify/API.svg';
 
 import './home.page.scss';
 
-function Home({ match }) {
+function Home({ match, t }) {
   const [result, setResult] = useState(null);
   const [executeScroll, scrollHtmlAttributes] = useScroll();
 
@@ -27,14 +28,14 @@ function Home({ match }) {
     <section className="Page HomePage">
       <header className="PageHeader">
         <h1 className="textCenter">
-          Document Verification
+          {t('Document Verification')}
         </h1>
         <h4 className="textCenter">
-          Instant document verification
+          {t('Instant document verification')}
         </h4>
         <VerifyForm onFetch={onFetch} params={match.params} />
         <div className="Or-choose-Document textCenter">
-          Or choose <span className="link" onClick={onButtonLoadClick}>Document Certificate JSON</span> file
+          {t('Or choose')} <span className="link" onClick={onButtonLoadClick}>{t('Document Certificate JSON')}</span> {t('file')}
           <input type="file" id="input-file" accept=".json" onChange={onFileUpload} />
         </div>
         <div className="PageHeaderArrow"></div>
@@ -45,43 +46,43 @@ function Home({ match }) {
       </section>
 
       <section className="HomeBlock Features textCenter">
-        <h2>Platform Features</h2>
+        <h2>{t('Platform Features')}</h2>
         <div className="Grid">
           <div>
             <div className="FeaturesImgWrapper">
               <img src={ImgFeatures1} alt="Quorum Blockchain" />
             </div>
-            <h5>Quorum Blockchain</h5>
+            <h5>{t('Quorum Blockchain')}</h5>
           </div>
           <div>
             <div className="FeaturesImgWrapper">
               <img src={ImgFeatures2} alt="Programable Documents" />
             </div>
-            <h5>Programable Documents</h5>
+            <h5>{t('Programable Documents')}</h5>
           </div>
           <div>
             <div className="FeaturesImgWrapper">
               <img src={ImgFeatures3} alt="Smart Contract" />
             </div>
-            <h5>Smart Contract</h5>
+            <h5>{t('Smart Contract')}</h5>
           </div>
           <div>
             <div className="FeaturesImgWrapper">
               <img src={ImgFeatures4} alt="Security" />
             </div>
-            <h5>Security</h5>
+            <h5>{t('Security')}</h5>
           </div>
           <div>
             <div className="FeaturesImgWrapper">
               <img src={ImgFeatures5} alt="Privacy" />
             </div>
-            <h5>Privacy</h5>
+            <h5>{t('Privacy')}</h5>
           </div>
           <div>
             <div className="FeaturesImgWrapper">
               <img src={ImgFeatures6} alt="API" />
             </div>
-            <h5>API</h5>
+            <h5>{t('API')}</h5>
           </div>
         </div>
       </section>
@@ -92,16 +93,13 @@ function Home({ match }) {
             <img src={Img_01} alt="" />
           </div>
           <div>
-            <h3>The First Step</h3>
+            <h3>{t('The First Step')}</h3>
             <p>
-              The system will be an open standard for creating, issuing,
-              viewing, and verifying blockchain - based programmable documents.
-              These digital records are registered on a private blockchain, cryptographically
-              signed, tamper - proof, and shareable
+              {t('The system will be an open')}
             </p>
             <p>&nbsp;</p>
             <p>
-              <button className="button">Discover more</button>
+              <button className="button">{t('Discover more')}</button>
             </p>
           </div>
         </div>
@@ -151,4 +149,4 @@ function Home({ match }) {
   }
 }
 
-export { Home };
+export default withTranslation()(Home);

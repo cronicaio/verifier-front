@@ -17,6 +17,11 @@
 
     &Logo {
       margin-left: 89px;
+
+      .rtl & {
+         margin-left: 0;
+         margin-right: 89px;
+      }
     }
 
     nav.hiddenMobile {
@@ -24,11 +29,21 @@
       align-items: center;
       padding-right: 60px !important;
 
+      .rtl & {
+        padding-right: auto !important;
+        padding-left: 60px !important;
+      }
+
       a {
         margin-left: 28px;
         font-size: 17px;
         letter-spacing: 0.34px;
         text-decoration: none;
+
+        .rtl & {
+          margin-left: 0;
+          margin-right: 28px;
+        }
 
         color: #ffffff;
         cursor: pointer;
@@ -61,6 +76,11 @@
       flex: 1;
       padding-left: 23px;
       text-align: center;
+
+      .rtl & {
+        padding-left: 0;
+        padding-right: 23px;
+      }
 
       img {
         max-width: 150px;

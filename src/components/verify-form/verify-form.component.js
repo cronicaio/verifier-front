@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { withTranslation } from 'react-i18next';
 
 import { Api } from '../../services/api';
 
@@ -6,15 +7,16 @@ import './verify-form.component.scss';
 
 function VerifyForm(props) {
 
+  const { t } = props; 
   const initialID = props.params && (props.params.id !== undefined) ? props.params.id : Api.testID;
   const [documentID, setDocumentID] = useState(initialID); 
 
   return (
     <section className="VerifyForm">
-      <input type="text" placeholder="Please enter your Document ID"
+      <input type="text" placeholder={t('Please enter your Document ID')}
         value={documentID}
         onChange={event => setDocumentID(event.target.value)} />
-      <button type="button" className="button" onClick={handleVerify} >Verify</button>
+      <button type="button" className="button" onClick={handleVerify} >{t('Verify')}</button>
     </section>
   );  
 
@@ -28,4 +30,4 @@ function VerifyForm(props) {
 
 
 
-export { VerifyForm };
+export default withTranslation()(VerifyForm);

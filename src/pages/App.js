@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { Suspense  } from 'react';
 import { HashRouter as Router, Route } from "react-router-dom";
 
-import { Header } from '../components/app-header/header.component';
-import { Footer } from '../components/app-footer/footer.component';
+import i18n from '../i18n';
 
-import { Home } from './home/home.page';
-import { Result } from './result/result.page';
-import { Product } from './product/product.page';
-import { Cases } from './cases/cases.page';
-import { Contact } from './contact/contact.page';
+import Header from '../components/app-header/header.component';
+import Footer from '../components/app-footer/footer.component';
+
+import Home from './home/home.page';
+import Result from './result/result.page';
+import Product from './product/product.page';
+import Cases from './cases/cases.page';
+import Contact from './contact/contact.page';
 
 function App() {
   return (
-    <section className="App">
+    <Suspense fallback="loading">
+      <section className={'App ' + i18n.dir(window.localStorage.i18nextLng || 'en')}>
       <Router>
         <Header />
         <Route exact path="/" component={Home} />
@@ -24,6 +27,7 @@ function App() {
         <Footer />
       </Router>
     </section>
+    </Suspense>
   );
 }
 

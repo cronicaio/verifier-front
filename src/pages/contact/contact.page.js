@@ -1,56 +1,53 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
 import './contact.page.scss';
 
 import LocationImg from '../../assets/Location.png';
 
 
-function Contact() {
+function Contact({ t }) {
   return (
     <section className="Page ContactPage">
       <header className="PageHeader">
-        <h1 className="textCenter">Contact us</h1>
+        <h1 className="textCenter">{t('Contact us')}</h1>
       </header>
       <section className="ContactBlock">
         <p>
-          At Cronica, we believe authentication should be easy: far easier than
-          it has been to-date. That’s why we’ve developed our solution to be flexibly integrated
-          into existing infrastructure, as a standalone or supplementary solution, and easily tied
-          into existing process.
+          {t('contact_mg1')}
         </p>
         <p>
-          To discuss integrating Cronica into your solution – and introducing secure,
-          instantly-verifiable document authentication to your clients or customers – fill out the form below.
+          {t('contact_mg2')}
         </p>
       </section>
       <section className="FormBlock">
         <div className="FormBlockForm">
-          <h3>Send us a message</h3>
+          <h3>{t('Send us a message')}</h3>
           <form>
             <p>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder={t('Name')} />
             </p>
             <p>
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder={t('Email')} />
               <span>
-                Please use a REAL email address so that we can get<br className="hiddenDesktop" />back to you.
+                {t('contact_mg3')}
               </span>
             </p>
             <p>
-              <input type="text" placeholder="Subject title" />
+              <input type="text" placeholder={t('Subject title')} />
             </p>
             <p>
-              <textarea placeholder="Message"></textarea>
+              <textarea placeholder={t('Message')}></textarea>
             </p>
             <p className="textCenter">
-              <button className="button">SEND FORM</button>
+              <button className="button">{t('SEND FORM')}</button>
             </p>
           </form>
         </div>
         <div className="FormBlockAddress">
-          <h3>Address</h3>
+          <h3>{t('Address')}</h3>
           <div className="hiddenMobile Rectangle-12">
-            <img width="406px" src={LocationImg} alt="" />
+            <img width="406px" src={LocationImg} alt="LocationImg" />
           </div>
           <p>
             Two Logan Square<br />
@@ -67,4 +64,4 @@ function Contact() {
   );
 }
 
-export { Contact };
+export default withTranslation()(Contact);

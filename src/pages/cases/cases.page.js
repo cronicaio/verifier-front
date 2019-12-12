@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
 import './cases.page.scss';
 
@@ -10,11 +11,11 @@ import ImgCase4 from '../../assets/cases/case5.svg';
 import ImgCase5 from '../../assets/cases/case6.svg';
 import ImgCase6 from '../../assets/cases/case7.svg';
 
-function Cases() {
+function Cases({ t }) {
   return (
     <section className="Page CasesPage">
       <header className="PageHeader">
-        <h1 className="textCenter">Use Cases</h1>
+        <h1 className="textCenter">{t('Use Cases')}</h1>
       </header>
 
       <div className="CaseBlock">
@@ -22,21 +23,14 @@ function Cases() {
           <img src={ImgCase0} alt="" />
         </div>
         <div>
-          <h5>Identity</h5>
-          <p>
-            Our identities are becoming more digitized. Cronica helps end-users take control of
-            their identity documents with secure, real-time authentication.
-          </p>
+          <h5>{t('Identity')}</h5>
+          <p>{t('Our identities are becoming more digitized')}</p>
         </div>
       </div>
       <div className="CaseBlock">
         <div>
-          <h5>Passports</h5>
-          <p>
-            With Cronica, issue and reissue critical documents – such as passports –
-            with significantly less time and resource cost. Only document data
-            necessary for authentication is cryptographically stored on the blockchain.
-          </p>
+          <h5>{t('Passports')}</h5>
+          <p>{t('With Cronica, issue and reissue critical documents')}</p>
         </div>
         <div>
           <img src={ImgCase1} alt="" />
@@ -47,7 +41,7 @@ function Cases() {
           <img src={ImgCase2} alt="" />
         </div>
         <div>
-          <h5>Applications </h5>
+          <h5>{t('Applications')}</h5>
           <p>
             Any application issued to the Cronica platform may be immediately verified 
             using through a digital signifier. Applications uploaded to the Cronica 
@@ -57,7 +51,7 @@ function Cases() {
       </div>
       <div className="CaseBlock">
         <div>
-          <h5>SLA Documents </h5>
+          <h5>{t('SLA Documents')}</h5>
           <p>
             Cronica-integrated organizations can quickly upload SLA documents, 
             store them on the blockchain, and allow permissioned parties to reprogram them. 
@@ -74,23 +68,14 @@ function Cases() {
           <img src={ImgCase4} alt="" />
         </div>
         <div>
-          <h5>Learning Certifications</h5>
-          <p>
-            Verify learning certifications, such as degrees and diplomas, from anywhere in the world.
-            Cronica gives critical certifications international, instantaneous verifiability without
-            exposing names or other sensitive information.
-          </p>
+          <h5>{t('Learning Certifications')}</h5>
+          <p>{t('Verify learning certifications')}</p>
         </div>
       </div>
       <div className="CaseBlock">
         <div>
-          <h5>Health Records</h5>
-          <p>
-            No document is more sensitive than health records. Cronica stores the data necessary 
-            for verification in machine-readable form. Verification can be achieved without 
-            disclosing sensitive data, and data only becomes human-readable once it is 
-            reformed with a locally-stored PDF template.
-          </p>
+          <h5>{t('Health Records')}</h5>
+          <p>{t('No document is more sensitive')}</p>
         </div>
         <div>
           <img src={ImgCase5} alt="" />
@@ -101,15 +86,12 @@ function Cases() {
           <img src={ImgCase6} alt="" />
         </div>
         <div>
-          <h5>Digital Credentials</h5>
-          <p>
-            No document is more sensitive than health records.
-            Cronica stores the data necessary for verification in machine-readable form.
-          </p>
+          <h5>{t('Digital Credentials')}</h5>
+          <p>{t('No document is more sensitive than health records')}</p>
         </div>
       </div>
     </section>
   );
 }
 
-export { Cases };
+export default withTranslation()(Cases);
