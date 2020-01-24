@@ -29,19 +29,18 @@ function App() {
       <section className={'AppNotification ' + (shouldShowNotify ? 'active' : '')}>
         <div className="content">
           <div className="contentInner">
-            <span className="exclamatione">
+            <div className="exclamatione">
               <FontAwesomeIcon className="" icon={faExclamationTriangle} />
-            </span>
-            <span>
-              <span>
+            </div>
+            <div>
+              <div>
                 Cronica will never ask you for personal or financial information.
                 Make sure the web address in your browser is <b>verify.bankaletihad.com</b> and that you're using a secure connection.
-              </span>
-                <br />
-              <span className="rtl">
+              </div>
+              <div className="rtl">
                 لن تطلب منك Cronica أبداً أن تشارك معلوماتك الشخصية أو المالية. تأكد من أن موقع الويب في المتصفح هو <b>verify.bankaletihad.com</b> وأنك تستخدم إتصالاً آمناً.
-              </span>
-            </span>
+              </div>
+            </div>
           </div>
         </div>
         <div className="close" onClick={onCloseNotify}>
