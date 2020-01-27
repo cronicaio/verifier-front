@@ -10,7 +10,7 @@
     <script language="JavaScript">
       function urlCheck() {
       if(
-      window.location.href=="verify.bankaletihad.com"
+      window.location.href.includes("https://verify.bankaletihad.com")
       )
       {$.getScript("https://www.googletagmanager.com/gtag/js?id=UA-157016207-3", function() {  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -21,7 +21,7 @@
       console.log("Verify BAE");
       }
 
-      else if(window.location.href=="verify.cronica.io")
+      else if(window.location.href.includes("https://verify.cronica.io"))
       {$.getScript("https://www.googletagmanager.com/gtag/js?id=UA-157016207-2", function() {  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
