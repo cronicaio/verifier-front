@@ -70,7 +70,7 @@ function Header() {
         <span>☰</span>
       </nav>
       {!!isMenuActive && (
-        <MobileMenu toggleMenu={toggleMenu} />
+        <MobileMenu toggleMenu={toggleMenu} currentLang={currentLang} />
       )}
     </header>
   );

@@ -9,9 +9,13 @@ import MenuIco2 from '../../assets/icons/Project.svg';
 import MenuIco3 from '../../assets/icons/Company.svg';
 import MenuIco4 from '../../assets/icons/Contacts.svg';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons'
+
+
 import './mobile-menu.component.scss';
 
-function MobileMenu({ toggleMenu, t }) {
+function MobileMenu({ toggleMenu, currentLang, t }) {
   return (
     <section className="hiddenDesktop mobileMenu" onClick={toggleMenu}>
       <p className="mobileMenuControl" >
@@ -44,6 +48,12 @@ function MobileMenu({ toggleMenu, t }) {
             <img src={MenuIco4} alt="Home" />
           </i>
           <NavLink to="/contact">{t('Contacts')}</NavLink>
+        </li>
+        <li>
+          <i className="mobileMenuIco">
+            <FontAwesomeIcon icon={faGlobeEurope} color="#438bff" />
+          </i>
+          <a>{currentLang.title}</a>
         </li>
       </ul>
     </section>
