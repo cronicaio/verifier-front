@@ -52,6 +52,43 @@
           opacity: 0.5;
         }
       }
+
+      .navLink {
+        position: relative;
+        color: white;
+        cursor: pointer;
+      }
+
+      .langDropdown {
+        position: absolute;
+        display: none;
+        width: 100px;
+
+        top: 30px;
+
+        color: black;
+        background-color: white;
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        &Link {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          padding: 1em;
+
+          &:hover {
+            background-color: rgb(230, 245, 255);
+          }
+        }
+
+
+        &.active {
+          display: block;
+        }
+      }
     }
   }
 }
