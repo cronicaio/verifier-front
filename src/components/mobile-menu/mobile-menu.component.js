@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
-import { withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobeEurope, faAngleDown, faCheck } from '@fortawesome/free-solid-svg-icons'
+
+import { languages } from '../../i18n';
 
 import Logo from '../../assets/svg/logo.svg';
 
@@ -9,13 +14,27 @@ import MenuIco2 from '../../assets/icons/Project.svg';
 import MenuIco3 from '../../assets/icons/Company.svg';
 import MenuIco4 from '../../assets/icons/Contacts.svg';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobeEurope, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 
 import './mobile-menu.component.scss';
 
-function MobileMenu({ toggleMenu, currentLang, t }) {
+function MobileMenu({ toggleMenu }) {
+
+  const { t, i18n } = useTranslation();
+
+  const [isLangDropDownActive, setLangDropDownActive] = useState(false);
+
+  const toggleLangDropDown = (event) => {
+    event && event.stopPropagation();
+    setLangDropDownActive(!isLangDropDownActive);
+  }
+
+  const onLangChange = (lang, event) => {
+    event && event.stopPropagation();
+    i18n.changeLanguage(lang.code);
+    toggleLangDropDown();
+  }
+
   return (
     <section className="hiddenDesktop mobileMenu" onClick={toggleMenu}>
       <p className="mobileMenuControl" >
@@ -53,16 +72,24 @@ function MobileMenu({ toggleMenu, currentLang, t }) {
           <i className="mobileMenuIco">
             <FontAwesomeIcon icon={faGlobeEurope} color="#438bff" />
           </i>
-          <span className="navLink">
+          <span className="navLink" onClick={toggleLangDropDown}>
             <span>Language</span>
               &nbsp;
               &nbsp;
             <FontAwesomeIcon icon={faAngleDown} />
           </span>
+          <div className={'langDropdown ' + (isLangDropDownActive ? 'active' : '')} >
+            {languages.map((lang, key) => (
+              <span className="langDropdownLink" key={key} onClick={e => onLangChange(lang, e)}>
+                <span>{lang.title}</span>
+                <FontAwesomeIcon icon={faCheck} color={lang.code === i18n.language ? 'lightblue' : 'transparent'} />
+              </span>
+            ))}
+          </div>
         </li>
       </ul>
     </section>
   );
 }
 
-export default withTranslation()(MobileMenu);
+export default MobileMenu;

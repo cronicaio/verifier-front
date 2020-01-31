@@ -72,12 +72,50 @@
         bottom: 10px;
       }
 
-      a, .navLink {
+      a,
+      .navLink {
         font-size: 21px;
         text-decoration: none;
 
         color: white;
       }
+
+      .navLink {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .langDropdown {
+    position: fixed;
+    display: none;
+
+    width: 80%;
+    top: 40%;
+    left: 10%;
+
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.16);
+
+    overflow: hidden;
+
+    &Link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 1em;
+
+      &:hover {
+        background-color: rgb(230, 245, 255);
+      }
+    }
+
+    &.active {
+      display: block;
     }
   }
 }
