@@ -10,7 +10,7 @@ import MenuIco3 from '../../assets/icons/Company.svg';
 import MenuIco4 from '../../assets/icons/Contacts.svg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons'
+import { faGlobeEurope, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 
 import './mobile-menu.component.scss';
@@ -49,11 +49,16 @@ function MobileMenu({ toggleMenu, currentLang, t }) {
           </i>
           <NavLink to="/contact">{t('Contacts')}</NavLink>
         </li>
-        <li>
+        <li className="langLi">
           <i className="mobileMenuIco">
             <FontAwesomeIcon icon={faGlobeEurope} color="#438bff" />
           </i>
-          <a>{currentLang.title}</a>
+          <span className="navLink">
+            <span>Language</span>
+              &nbsp;
+              &nbsp;
+            <FontAwesomeIcon icon={faAngleDown} />
+          </span>
         </li>
       </ul>
     </section>

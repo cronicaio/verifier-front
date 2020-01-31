@@ -23,7 +23,7 @@ function Header() {
   const [isMenuActive, setMenuActive] = useState(false);
   const [isLangDropDownActive, setLangDropDownActive] = useState(false);
   
-  const currentLang = languages.find(v => v.code === i18n.language);
+  const currentLang = languages.find(v => v.code === i18n.language) || languages[0];
 
   const toggleLangDropDown = () => {
     setLangDropDownActive(!isLangDropDownActive);

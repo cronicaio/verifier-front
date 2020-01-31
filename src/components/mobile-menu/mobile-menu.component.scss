@@ -55,6 +55,8 @@
   }
 
   ul {
+    position: relative;
+    height: calc(100% - 200px);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -65,7 +67,12 @@
       height: 85px;
       padding: 0 80px;
 
-      a {
+      &.langLi {
+        position: absolute;
+        bottom: 10px;
+      }
+
+      a, .navLink {
         font-size: 21px;
         text-decoration: none;
 
