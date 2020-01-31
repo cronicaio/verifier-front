@@ -1,56 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink, useLocation } from "react-router-dom";
-import { withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
+
+import { languages } from '../../i18n';
 
 import MobileMenu from '../mobile-menu/mobile-menu.component';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeEurope, faAngleDown, faCheck } from '@fortawesome/free-solid-svg-icons'
 
-import i18n from '../../i18n';
-
 import './header.component.scss';
 
 import Logo from '../../assets/svg/logo.svg';
 
-const langsInitialSyate = [
-  { title: 'EN', code: 'en-EN', active: false },
-  { title: 'AR', code: 'ar-AR', active: false }
-];
 
-function Header({ t }) {
-  const [langs, setLangs] = useState(langsInitialSyate);
-  const [currentLang, setCurrentLang] = useState(langsInitialSyate[0]);
-  const [isMenuActive, setMenuActive] = useState(false);
-  const [isLangDropDownActive, setLangDropDownActive] = useState(false);
+function Header() {
 
   const location = useLocation();
 
-  const setActiveLang = (langCode) => {
-    const prevLang = langs.find(v => !!v.active);
-    if (prevLang) prevLang.active = false;
-    const nextLang = langs.find(v => v.code === langCode);
+  const { t, i18n } = useTranslation();
 
-    if (nextLang) {
-      nextLang.active = true;
-      setLangs(langs);
-      setCurrentLang(nextLang);
-    }
-  }
+  const [isMenuActive, setMenuActive] = useState(false);
+  const [isLangDropDownActive, setLangDropDownActive] = useState(false);
+  
+  const currentLang = languages.find(v => v.code === i18n.language);
 
-  const toggleLang = () => {
+  const toggleLangDropDown = () => {
     setLangDropDownActive(!isLangDropDownActive);
   }
 
   const onLangChange = (lang) => {
     i18n.changeLanguage(lang.code);
-    toggleLang();
+    toggleLangDropDown();
   }
-
-  useEffect(() => {
-    setActiveLang(window.localStorage.i18nextLng);
-  }, [])
-
 
   if ((/searchBy/g).test(location.pathname))
     return (<div></div>);
@@ -62,18 +44,20 @@ function Header({ t }) {
       </NavLink>
       <nav className="hiddenMobile">
         <div className="navLink" >
-          <span onClick={toggleLang}>
+          <span onClick={toggleLangDropDown}>
             <FontAwesomeIcon icon={faGlobeEurope} />
               &nbsp;
+              &nbsp;
             <span>{currentLang.title}</span>
+              &nbsp;
               &nbsp;
             <FontAwesomeIcon icon={faAngleDown} />
           </span>
           <div className={'langDropdown ' + (isLangDropDownActive ? 'active' : '')} >
-            {langs.map((lang, key) => (
+            {languages.map((lang, key) => (
               <span className="langDropdownLink" key={key} onClick={e => onLangChange(lang)}>
                 <span>{lang.title}</span>
-                <FontAwesomeIcon icon={faCheck} color={lang.active ? 'lightblue' : 'transparent'} />
+                <FontAwesomeIcon icon={faCheck} color={lang.code === i18n.language ? 'lightblue' : 'transparent'} />
               </span>
             ))}
           </div>
@@ -97,4 +81,4 @@ function Header({ t }) {
   }
 }
 
-export default withTranslation()(Header);
+export default Header;

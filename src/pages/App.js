@@ -1,8 +1,5 @@
 import React, { useState, Suspense } from 'react';
-import { HashRouter as Router, Route } from "react-router-dom";
-import { createBrowserHistory } from 'history';
-
-// import i18n from '../i18n';
+import { HashRouter, Route } from "react-router-dom";
 
 import Header from '../components/app-header/header.component';
 import Footer from '../components/app-footer/footer.component';
@@ -17,7 +14,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 
 const notify = localStorage.getItem('notify');
-const history = createBrowserHistory();
 
 function App() {
   const i18n = null;
@@ -52,7 +48,7 @@ function App() {
         </div>
       </section>
       <section className={'App ' + (i18n && i18n.dir(window.localStorage.i18nextLng || 'en'))}>
-        <Router history={history}>
+        <HashRouter>
           <Header />
           <Route exact path="/" component={Home} />
           <Route path="/searchByIdStructured/:id" component={Result} />
@@ -61,7 +57,7 @@ function App() {
           <Route exact path="/cases" component={Cases} />
           <Route exact path="/contact" component={Contact} />
           <Footer />
-        </Router>
+        </HashRouter>
       </section>
     </Suspense>
   );

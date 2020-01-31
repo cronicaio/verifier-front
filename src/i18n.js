@@ -20,7 +20,7 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'en-En',
     debug: true,
 
     interpolation: {
@@ -28,5 +28,9 @@ i18n
     }
   });
 
+export const languages = [
+  { title: 'English', code: 'en-EN' },
+  { title: 'Arabic', code: 'ar-AR' }
+];
 
 export default i18n;
