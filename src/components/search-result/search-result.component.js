@@ -87,7 +87,12 @@ function SearchResult({ document, t }) {
         !document.isRevoked && document.documentLink && (
           <div className="ResultDownload">
             <PDFViewer document={{ url: document.documentLink }} scale={1.5} />
+            <div className="textCenter">
+              <br/>
+              <a href={document.documentLink} className="button" target="_blank" rel="noopener noreferrer" download >↓ Download Document</a>
+            </div>
           </div>
+          
         )
       }
     </section >

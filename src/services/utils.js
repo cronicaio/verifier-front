@@ -1,4 +1,3 @@
-
 export const setAuthToken = (token) => {
   localStorage.setItem('authToken', JSON.stringify(token));
 }
