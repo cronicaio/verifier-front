@@ -3,8 +3,8 @@ import useReactRouter from 'use-react-router';
 
 import './footer.component.scss';
 
-import Home5 from '../../assets/svg/home5.svg';
-import Social from '../../assets/social.png';
+// import Home5 from '../../assets/svg/home5.svg';
+// import Social from '../../assets/social.png';
 
 function Footer() {
   const { location } = useReactRouter();
@@ -14,7 +14,7 @@ function Footer() {
 
   return (
     <footer className="AppFooter">
-      <div className="Grid">
+      {/* <div className="Grid">
         <div className="Verified hiddenMobile">
           <img src={Home5} alt="Verified" />
         </div>
@@ -48,25 +48,25 @@ function Footer() {
           </ul>
         </div>
         <div></div>
-      </div>
-      <div className="Block Subscribe">
+      </div> */}
+      {/* <div className="Block Subscribe">
         <span>Subscribe to our newsletter</span>
         <div className="Email-opt-in">
           <input type="text" placeholder="Email address" />
           <button type="button" className="button">Send</button>
-        </div>
-        <div className="Social hiddenMobile">
+        </div> */}
+        {/* <div className="Social hiddenMobile">
           <img width="240px" src={Social} alt="" />
         </div>
-      </div>
+      </div> */}
       <div className="Block Copyright">
         <div className="Social hiddenDesktop">
-          <img width="240px" src={Social} alt="" />
+          {/* <img width="240px" src={Social} alt="" /> */}
         </div>
-        <span className="hiddenMobile">Terms of Use</span>
+        {/* <span className="hiddenMobile">Terms of Use</span>
         <span className="hiddenMobile">Privacy Policy</span>
-        <span className="hiddenMobile">Cookie Policy</span>
-        <span>© Cronica 2019</span>
+        <span className="hiddenMobile">Cookie Policy</span> */}
+        <span><p style={{textAlign: "center"}}>© Cronica 2019</p> </span>
       </div>
     </footer>
   );
