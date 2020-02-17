@@ -93,8 +93,8 @@ function Home({ match }) {
           </div>
           <div>
             <h3>The First Step</h3>
-            <p>
-              The system will be an open standard for creating, issuing,
+            <p style={{textAlign: "left"}}>
+              The system will is an open standard for creating, issuing,
               viewing, and verifying blockchain - based programmable documents.
               These digital records are registered on a private blockchain, cryptographically
               signed, tamper - proof, and shareable
