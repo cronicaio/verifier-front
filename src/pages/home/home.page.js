@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 import { VerifyForm } from '../../components/verify-form/verify-form.component';
 import { SearchResult } from '../../components/search-result/search-result.component';
