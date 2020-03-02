@@ -39,9 +39,9 @@ function Header() {
 
   return (
     <header className="AppHeader">
-      <NavLink to="/" className="AppHeaderLogo">
+      {/* <NavLink to="/" className="AppHeaderLogo">
         <img src={Logo} alt="Cronica" />
-      </NavLink>
+      </NavLink> */}
       <nav className="hiddenMobile">
         <div className="navLink" >
           <span onClick={toggleLangDropDown}>
