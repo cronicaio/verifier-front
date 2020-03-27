@@ -26,21 +26,20 @@ function Home({ match }) {
   return (
     <section className="Page HomePage">
       <header className="PageHeader">
-        <h1 className="textCenter">
-          Document Verification
+        <h1 className="textCenter" style={{color:"black"}}>
+        Permit Verification
         </h1>
-        <h4 className="textCenter">
+        <h4 className="textCenter" style={{color:"grey"}}>
           Instant document verification
         </h4>
         <VerifyForm onFetch={onFetch} params={match.params} />
-        <div className="Or-choose-Document textCenter">
-          Or choose <span className="link" onClick={onButtonLoadClick}>Document Certificate JSON</span> file
+        <div className="Or-choose-Document textCenter" style={{color:"grey"}}>
+          Or choose <span className="link" onClick={onButtonLoadClick} style={{color:"#CC0000"}}>Document Certificate JSON</span> file
           <input type="file" id="input-file" accept=".json" onChange={onFileUpload} />
         </div>
-        <div className="PageHeaderArrow"></div>
       </header>
 
-      <section  {...scrollHtmlAttributes}>
+      {/* <section  {...scrollHtmlAttributes}>
         {!!result && <SearchResult document={result} className="HomeBlock TempBlock" />}
       </section>
 
@@ -84,9 +83,9 @@ function Home({ match }) {
             <h5>API</h5>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="HomeBlock TempBlock textCenter">
+      {/* <section className="HomeBlock TempBlock textCenter">
         <div className="Flex">
           <div >
             <img src={Img_01} alt="" />
@@ -113,11 +112,11 @@ function Home({ match }) {
               </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="HomeBlock TempBlock textCenter hiddenMobile">
+      {/* <section className="HomeBlock TempBlock textCenter hiddenMobile">
         <img src={Img_28} alt="" />
-      </section>
+      </section> */}
 
     </section>
   );
