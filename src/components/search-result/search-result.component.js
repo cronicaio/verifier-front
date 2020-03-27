@@ -25,7 +25,7 @@ function SearchResult({ document }) {
         {document.documentLink && !document.isRevoked && (
           <div className="ResultDownload">
             <div className="textCenter">
-              <a href={document.documentLink} className="button" target="_blank" rel="noopener noreferrer" download >↓ Download Document</a>
+              <a href={document.documentLink} className="button" style={{background:"#CC0000"}} target="_blank" rel="noopener noreferrer" download >↓ Download Document</a>
             </div>
           </div>
         )}
@@ -87,7 +87,7 @@ function SearchResult({ document }) {
             <PDFViewer document={{ url: document.documentLink }} scale={1.5} />
             <div className="textCenter">
               <br/>
-              <a href={document.documentLink} className="button" target="_blank" rel="noopener noreferrer" download >↓ Download Document</a>
+              <a href={document.documentLink} className="button" style={{background:"#CC0000"}} target="_blank" rel="noopener noreferrer" download >↓ Download Document</a>
             </div>
           </div>
           

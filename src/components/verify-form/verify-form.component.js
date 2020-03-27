@@ -14,7 +14,7 @@ function VerifyForm(props) {
       <input type="text" placeholder="Please enter your Document ID"
         value={documentID}
         onChange={event => setDocumentID(event.target.value)}
-        style={{color:"#CC0000"}} />
+        style={{background:"#CC0000",color:"white"}} />
       <button type="button" className="button" onClick={handleVerify} style={{color:"red",background:"white"}}>Verify</button>
     </section>
   );  
