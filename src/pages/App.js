@@ -34,11 +34,11 @@ function App() {
             </div>
             <div>
               <div>
-                Cronica will never ask you for personal or financial information.
+                Tasreeh will never ask you for personal or financial information.
                 Make sure the web address in your browser is <b>{window.location.hostname}</b> and that you're using a secure connection.
               </div>
               <div className="rtl">
-                لن تطلب منك Cronica أبداً أن تشارك معلوماتك الشخصية أو المالية. تأكد من أن موقع الويب في المتصفح هو <b>{window.location.hostname}</b> وأنك تستخدم إتصالاً آمناً.
+                لن تطلب منك Tasreeh أبداً أن تشارك معلوماتك الشخصية أو المالية. تأكد من أن موقع الويب في المتصفح هو <b>{window.location.hostname}</b> وأنك تستخدم إتصالاً آمناً.
               </div>
             </div>
           </div>

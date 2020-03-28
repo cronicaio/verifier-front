@@ -105,7 +105,7 @@ function Home({ match }) {
     onClick={(e): void => {
       e.preventDefault();
  window.open(
-  'https://cronica.io',
+  'https://tasreeh.jo',
   '_blank' 
 )
       }}> Discover More</button>
