@@ -26,27 +26,6 @@ function App() {
 
   return (
     <Suspense fallback="loading">
-      <section className={'AppNotification ' + (shouldShowNotify ? 'active' : '')}>
-        <div className="content">
-          <div className="contentInner">
-            <div className="exclamatione">
-              <FontAwesomeIcon className="" icon={faExclamationTriangle} />
-            </div>
-            <div>
-              {/* <div>
-                Tasreeh will never ask you for personal or financial information.
-                Make sure the web address in your browser is <b>{window.location.hostname}</b> and that you're using a secure connection.
-              </div> */}
-              <div className="rtl">
-                لن تطلب منك Tasreeh أبداً أن تشارك معلوماتك الشخصية أو المالية. تأكد من أن موقع الويب في المتصفح هو <b>{window.location.hostname}</b> وأنك تستخدم إتصالاً آمناً.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="close" onClick={onCloseNotify}>
-          <FontAwesomeIcon icon={faTimesCircle} />
-        </div>
-      </section>
       <section className={'App ' + (i18n && i18n.dir(window.localStorage.i18nextLng || 'en'))}>
         <Router>
           <Header />
