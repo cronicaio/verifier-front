@@ -27,16 +27,16 @@ function Home({ match }) {
     <section className="Page HomePage">
       <header className="PageHeader">
         <h1 className="textCenter" style={{color:"black"}}>
-        Permit Verification
+        تدقيق صحة التصاريح
         </h1>
         <h4 className="textCenter" style={{color:"grey"}}>
-          Instant document verification
+        التحقق الفوري من صحة التصريح
         </h4>
         <VerifyForm onFetch={onFetch} params={match.params} />
-        <div className="Or-choose-Document textCenter" style={{color:"grey"}}>
+        {/* <div className="Or-choose-Document textCenter" style={{color:"grey"}}>
           Or choose <span className="link" onClick={onButtonLoadClick} style={{color:"#CC0000"}}>Document Certificate JSON</span> file
           <input type="file" id="input-file" accept=".json" onChange={onFileUpload} />
-        </div>
+        </div> */}
       </header>
 
       {/* <section  {...scrollHtmlAttributes}>

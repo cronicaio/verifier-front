@@ -11,11 +11,11 @@ function VerifyForm(props) {
 
   return (
     <section className="VerifyForm">
-      <input type="text" placeholder="Please enter your Document ID"
+      <input type="text" placeholder="الرجاء ادخال رقم التصريح"
         value={documentID}
         onChange={event => setDocumentID(event.target.value)}
         style={{background:"#CC0000",color:"white"}} />
-      <button type="button" className="button" onClick={handleVerify} style={{color:"red",background:"white"}}>Verify</button>
+      <button type="button" className="button" onClick={handleVerify} style={{color:"red",background:"white"}}>تحقق</button>
     </section>
   );  
 

@@ -33,10 +33,10 @@ function App() {
               <FontAwesomeIcon className="" icon={faExclamationTriangle} />
             </div>
             <div>
-              <div>
+              {/* <div>
                 Tasreeh will never ask you for personal or financial information.
                 Make sure the web address in your browser is <b>{window.location.hostname}</b> and that you're using a secure connection.
-              </div>
+              </div> */}
               <div className="rtl">
                 لن تطلب منك Tasreeh أبداً أن تشارك معلوماتك الشخصية أو المالية. تأكد من أن موقع الويب في المتصفح هو <b>{window.location.hostname}</b> وأنك تستخدم إتصالاً آمناً.
               </div>

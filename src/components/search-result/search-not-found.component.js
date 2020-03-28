@@ -8,7 +8,7 @@ function SearchResultNotFound({ errorMessage }) {
       <img src={Img_notfound} className="SearchResultImg" alt="revoked" />
       <div className="ResultBlock">
         <div className="ResultDownload">
-          <h2 className="textCenter">Document Not Found</h2>
+          <h2 className="textCenter"> لا يوجد تصريح</h2>
           <p>{errorMessage}</p>
         </div>
       </div>
