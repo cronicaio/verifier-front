@@ -24,7 +24,7 @@ function Cases() {
         <div>
           <h5>Identity</h5>
           <p>
-            Our identities are becoming more digitized. Cronica helps end-users take control of
+            Our identities are becoming more digitized. Tasreeh helps end-users take control of
             their identity documents with secure, real-time authentication.
           </p>
         </div>
@@ -33,7 +33,7 @@ function Cases() {
         <div>
           <h5>Passports</h5>
           <p>
-            With Cronica, issue and reissue critical documents – such as passports –
+            With Tasreeh, issue and reissue critical documents – such as passports –
             with significantly less time and resource cost. Only document data
             necessary for authentication is cryptographically stored on the blockchain.
           </p>
@@ -49,8 +49,8 @@ function Cases() {
         <div>
           <h5>Applications </h5>
           <p>
-            Any application issued to the Cronica platform may be immediately verified 
-            using through a digital signifier. Applications uploaded to the Cronica 
+            Any application issued to the Tasreeh platform may be immediately verified 
+            using through a digital signifier. Applications uploaded to the Tasreeh 
             blockchain may also have additional conditions placed upon it by permissioned parties.
           </p>
         </div>
@@ -59,7 +59,7 @@ function Cases() {
         <div>
           <h5>SLA Documents </h5>
           <p>
-            Cronica-integrated organizations can quickly upload SLA documents, 
+            Tasreeh-integrated organizations can quickly upload SLA documents, 
             store them on the blockchain, and allow permissioned parties to reprogram them. 
             SLA agreements can then be retrieved, verified, and reformed by those with the 
             requisite signifiers and PDF template.
@@ -77,7 +77,7 @@ function Cases() {
           <h5>Learning Certifications</h5>
           <p>
             Verify learning certifications, such as degrees and diplomas, from anywhere in the world.
-            Cronica gives critical certifications international, instantaneous verifiability without
+            Tasreeh gives critical certifications international, instantaneous verifiability without
             exposing names or other sensitive information.
           </p>
         </div>
@@ -86,7 +86,7 @@ function Cases() {
         <div>
           <h5>Health Records</h5>
           <p>
-            No document is more sensitive than health records. Cronica stores the data necessary 
+            No document is more sensitive than health records. Tasreeh stores the data necessary 
             for verification in machine-readable form. Verification can be achieved without 
             disclosing sensitive data, and data only becomes human-readable once it is 
             reformed with a locally-stored PDF template.
@@ -104,7 +104,7 @@ function Cases() {
           <h5>Digital Credentials</h5>
           <p>
             No document is more sensitive than health records.
-            Cronica stores the data necessary for verification in machine-readable form.
+            Tasreeh stores the data necessary for verification in machine-readable form.
           </p>
         </div>
       </div>

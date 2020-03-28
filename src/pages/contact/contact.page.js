@@ -13,13 +13,13 @@ function Contact() {
       </header>
       <section className="ContactBlock">
         <p>
-          At Cronica, we believe authentication should be easy: far easier than
+          At Tasreeh, we believe authentication should be easy: far easier than
           it has been to-date. That’s why we’ve developed our solution to be flexibly integrated
           into existing infrastructure, as a standalone or supplementary solution, and easily tied
           into existing process.
         </p>
         <p>
-          To discuss integrating Cronica into your solution – and introducing secure,
+          To discuss integrating Tasreeh into your solution – and introducing secure,
           instantly-verifiable document authentication to your clients or customers – fill out the form below.
         </p>
       </section>
@@ -53,13 +53,7 @@ function Contact() {
             <img width="406px" src={LocationImg} alt="" />
           </div>
           <p>
-            Two Logan Square<br />
-            Suite #820<br />
-            Philadelphia, PA 1913<br />
-            <br />
-            <a href="mailto:hello@cronica.io">hello@cronica.io</a><br />
-            <br />
-            (214) 919-8972
+
           </p>
         </div>
       </section>

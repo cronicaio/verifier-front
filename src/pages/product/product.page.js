@@ -16,14 +16,14 @@ function Product() {
           or Security For Convenience.
         </h1>
         <h4 className="textCenter">
-          With Cronica, You Don't Have To.
+          With Tasreeh, You Don't Have To.
         </h4>
       </header>
       <section className="HomeBlock textCenter">
         <p>
           <button type="button" className="button">START TODAY</button>
         </p>
-        <h2>Why Cronica?</h2>
+        <h2>Why Tasreeh?</h2>
         <p>
           Our lives and identities are coordinated digitally, online.
           We need a document authentication solution that is as easy as a website,
@@ -33,8 +33,8 @@ function Product() {
           <img width="100%" src={Product1} alt="" />
         </p>
         <p>
-          Cronica is the first document authentication solution to use blockchain technology.
-          By separating document data from document representation, Cronica makes it
+          Tasreeh is the first document authentication solution to use blockchain technology.
+          By separating document data from document representation, Tasreeh makes it
           possible to issue and verify critical documents without requiring human
           intermediaries to read sensitive data or handle physical documents.
         </p>

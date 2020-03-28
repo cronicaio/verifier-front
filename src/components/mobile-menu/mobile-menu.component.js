@@ -15,7 +15,7 @@ function MobileMenu({ toggleMenu }) {
     <section className="hiddenDesktop mobileMenu" onClick={toggleMenu}>
       <p className="mobileMenuControl" >
         <NavLink to="/" className="AppHeaderLogo">
-          <img src={Logo} alt="Cronica" />
+          <img src={Logo} alt="Tasreeh" />
         </NavLink>
         <span className="mobileMenuControlClose">×</span>
       </p>
