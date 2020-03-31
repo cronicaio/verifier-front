@@ -5,9 +5,7 @@ const testID = process.env.NODE_ENV === 'development'
   ? ''
   : '';
 
-const BASE_URL = process.env.NODE_ENV === 'development'
-  ? 'https://api-verify.b1.cronica.cloud'
-  : `https://api-${window.location.hostname}`;
+const BASE_URL = `https://api-verify.tasreeh.jo`;
 
 const get = (path, token) => {
   const headers = {
