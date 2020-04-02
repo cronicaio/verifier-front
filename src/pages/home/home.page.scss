@@ -1,9 +1,11 @@
 @media (min-width: 576px) {
   .HomePage {
+    height: 100vh;
+
     .PageHeader {
       position: relative;
 
-      height: 916px;
+      height: 100%;
 
       background-image: url(../../assets/icons/Verify/verify-header-bg.svg) !important;
       background-position-y: top !important;
@@ -124,6 +126,8 @@
 
 @media (max-width: 575px) {
   .HomePage {
+    height: 100vh;
+    
     .PageHeader {
       position: relative;
       padding-top: 91px;
