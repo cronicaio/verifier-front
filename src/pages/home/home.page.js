@@ -112,14 +112,14 @@ function Home({ match }) {
             <p>&nbsp;</p>
             <p>
             <button
-    className="button"
-    onClick={(e): void => {
-      e.preventDefault();
- window.open(
-  'https://cronica.io',
-  '_blank' 
-)
-      }}> Discover More</button>
+              className="button"
+              onClick={(e) => {
+                e.preventDefault();
+                  window.open(
+                    'https://cronica.io',
+                    '_blank' 
+                  )
+                }}> Discover More</button>
               </p>
           </div>
         </div>
