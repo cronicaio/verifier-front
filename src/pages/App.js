@@ -10,9 +10,6 @@ import { Product } from './product/product.page';
 import { Cases } from './cases/cases.page';
 import { Contact } from './contact/contact.page';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
-
 const notify = localStorage.getItem('notify');
 
 function App() {

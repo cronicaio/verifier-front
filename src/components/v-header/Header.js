@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import { Link } from 'react-router-dom';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faBars, faTimes, faCogs } from '@fortawesome/free-solid-svg-icons'
 
 import './Header.scss';
 
@@ -21,7 +17,7 @@ class Header extends Component {
     const username = '';
 
     return (
- <div></div>
+      <div></div>
     );
   }
 

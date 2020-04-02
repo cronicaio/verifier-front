@@ -20,11 +20,6 @@ function Header() {
       <NavLink to="/" className="AppHeaderLogo">
         <img src={Logo} style={{horizontal:"middle"}} alt="Cronica" />
       </NavLink>
-      <nav className="hiddenMobile">
-        {/* <NavLink to="/" exact>Home</NavLink>
-        <a target="_blank" rel="noopener noreferrer" href="https://cronica.io/product">Product</a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.cronica.io/contact-us/">Contact Us</a> */}
-      </nav>
       <nav className="hiddenDesktop mobileMenuBtn" onClick={toggleMenu}>
         <span>☰</span>
       </nav>

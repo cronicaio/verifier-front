@@ -39,15 +39,10 @@ function SearchResult({ document }) {
               <a href={document.documentLink} className="button" style={{background:"#CC0000"}} target="_blank" rel="noopener noreferrer" download >تحميل التصريح</a>
             </div>
           </div>
-          
         )
       }
     </section >
   );
-
-  function formatDate(timestamp) {
-    return new Date(timestamp).toLocaleDateString();
-  }
 }
 
 export { SearchResult };
