@@ -14,15 +14,21 @@ function SearchResult({ document }) {
           <img src={Img_revoked} className="SearchResultImg" alt="revoked" />
         )}
         {(!!document.isRevoked) && (
-          <h2 className="textCenter">Document Revoked</h2>
+          <h2 className="textCenter">التصريح ملغي</h2>
         )}
-        {(!document.isRevoked) && (
+        {((document.expireTimestamp != 0) && (document.expireTimestamp <= Date.now())) && (
+          <img src={Img_revoked} className="SearchResultImg" alt="revoked" />
+        )}
+        {((document.expireTimestamp != 0) && (document.expireTimestamp <= Date.now())) && (
+          <h2 className="textCenter">انتهت صلاحية التصريح</h2>
+        )}
+        {(!document.isRevoked) && ((document.expireTimestamp == 0) || (document.expireTimestamp > Date.now())) && (
           <img src={Img_verified} className="SearchResultImg" alt="verified" />
         )}
-        {(!document.isRevoked) && (
+        {(!document.isRevoked) && ((document.expireTimestamp == 0) || (document.expireTimestamp > Date.now())) && (
           <h2 className="textCenter" >تم التحقق من صحة التصريح</h2>
         )}
-        {document.documentLink && !document.isRevoked && (
+        {document.documentLink && !document.isRevoked && ((document.expireTimestamp == 0) || (document.expireTimestamp > Date.now())) && (
           <div className="ResultDownload">
             <div className="textCenter">
               <a href={document.documentLink} className="button" style={{background:"#CC0000"}} target="_blank" rel="noopener noreferrer" download >تحميل التصريح</a>
@@ -31,7 +37,7 @@ function SearchResult({ document }) {
         )}
       </section>
       {
-        !document.isRevoked && document.documentLink && (
+        !document.isRevoked && document.documentLink && ((document.expireTimestamp == 0) || (document.expireTimestamp > Date.now())) && (
           <div className="ResultDownload">
             <PDFViewer document={{ url: document.documentLink }} scale={1.5} />
             <div className="textCenter">
