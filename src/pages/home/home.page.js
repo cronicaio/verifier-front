@@ -1,13 +1,19 @@
 import React, { useState, useRef} from 'react';
-
+import { NavLink } from "react-router-dom";
 import { VerifyForm } from '../../components/verify-form/verify-form.component';
-
+import Finto_logo from '../../assets/finto.png';
 import './home.page.scss';
 
 function Home({ match }) {
   const [result, setResult] = useState(null);
   const [executeScroll, scrollHtmlAttributes] = useScroll();
-
+  const logo = {
+    color: "white",
+    position:"absolute",
+    bottom:"2px",
+    width:"100%",
+textAlign:"center"
+  };
   return (
     <section className="Page HomePage">
       <header className="PageHeader">
@@ -18,6 +24,11 @@ function Home({ match }) {
         التحقق الفوري من صحة التصريح
         </h4>
         <VerifyForm onFetch={onFetch} params={match.params} />
+        <div style={logo}>
+        <a href="https://finto.io" target="_blank">
+        <img src={Finto_logo}  style={{maxWidth:"10%"}}alt="Finto" />
+      </a>
+      </div>
       </header>
     </section>
   );

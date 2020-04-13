@@ -1,6 +1,7 @@
 import React from 'react';
 import useReactRouter from 'use-react-router';
-
+import Logo from '../../assets/svg/logo.svg';
+import { NavLink } from "react-router-dom";
 import './footer.component.scss';
 
 // import Home5 from '../../assets/svg/home5.svg';
@@ -13,7 +14,9 @@ function Footer() {
     return (<div></div>);
 
   return (
-    <div></div>);
+    <div>
+
+    </div>);
 }
 
 export { Footer };

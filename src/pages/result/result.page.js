@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import Finto_logo from '../../assets/finto.png';
 import Header from '../../components/v-header/Header';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,7 +7,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 import { SearchResult } from '../../components/search-result/search-result.component';
 import { SearchResultNotFound } from '../../components/search-result/search-not-found.component';
-
+import { NavLink } from "react-router-dom";
 import { Api } from '../../services/api';
 
 
@@ -21,7 +21,13 @@ const Result = (props) => {
   const [errorMessage, setErrorMessage] = useState(null);
 
   const documentID = props.match.params.id;
-
+  const logo = {
+    color: "white",
+    position:"absolute",
+    bottom:"-60px",
+    width:"100%",
+textAlign:"center"
+  };
   // console.log(documentID)
 
   useEffect(() => handleVerify(documentID), [documentID]);
@@ -41,6 +47,11 @@ const Result = (props) => {
         </div>
         }
       </section>
+      <div style={logo}>
+        <a href="https://finto.io" target="_blank">
+        <img src={Finto_logo}  style={{maxWidth:"10%"}}alt="Finto" />
+      </a>
+      </div>
     </section>
   );
 
