@@ -47,9 +47,9 @@ textAlign:"center"
         </div>
         }
       </section>
-      <div style={logo}>
+      <div className="logo">
         <a href="https://finto.io" target="_blank">
-        <img src={Finto_logo}  style={{maxWidth:"10%"}}alt="Finto" />
+        <img src={Finto_logo}  className="logoPic" alt="Finto" />
       </a>
       </div>
     </section>

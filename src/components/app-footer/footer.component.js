@@ -1,6 +1,6 @@
 import React from 'react';
 import useReactRouter from 'use-react-router';
-import Logo from '../../assets/svg/logo.svg';
+import Logo from '../../assets/tasreeh-final-logo.png';
 import { NavLink } from "react-router-dom";
 import './footer.component.scss';
 

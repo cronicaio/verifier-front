@@ -54,7 +54,14 @@
         }
       }
     }
-
+    .logo {
+      color: white;
+      position: absolute;
+      bottom:2px;
+      width:100%;
+  text-align:center
+    }
+    
     .HomeBlock {
       margin-bottom: 100px !important;
     }
@@ -125,6 +132,10 @@
 }
 
 @media (max-width: 575px) {
+
+  .logoPic {
+    width:40%
+  }
   .HomePage {
     height: 100vh;
     

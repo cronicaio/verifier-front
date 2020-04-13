@@ -7,13 +7,6 @@ import './home.page.scss';
 function Home({ match }) {
   const [result, setResult] = useState(null);
   const [executeScroll, scrollHtmlAttributes] = useScroll();
-  const logo = {
-    color: "white",
-    position:"absolute",
-    bottom:"2px",
-    width:"100%",
-textAlign:"center"
-  };
   return (
     <section className="Page HomePage">
       <header className="PageHeader">
@@ -24,9 +17,9 @@ textAlign:"center"
         التحقق الفوري من صحة التصريح
         </h4>
         <VerifyForm onFetch={onFetch} params={match.params} />
-        <div style={logo}>
+        <div className="logo">
         <a href="https://finto.io" target="_blank">
-        <img src={Finto_logo}  style={{maxWidth:"10%"}}alt="Finto" />
+        <img src={Finto_logo}  className="logoPic" alt="Finto" />
       </a>
       </div>
       </header>
