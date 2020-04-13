@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
-import Logo from '../../assets/tasreeh-final-logo.png';
+import Logo from '../../assets/tasreeh-final-logo.svg';
 
 import MenuIco1 from '../../assets/icons/Home.svg';
 import MenuIco2 from '../../assets/icons/Project.svg';

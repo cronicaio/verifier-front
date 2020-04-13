@@ -6,7 +6,7 @@ import { MobileMenu } from '../mobile-menu/mobile-menu.component';
 
 import './header.component.scss';
 
-import Logo from '../../assets/tasreeh-final-logo.png';
+import Logo from '../../assets/tasreeh-final-logo.svg';
 
 function Header() {
   const [isMenuActive, setMenuActive] = useState(false);
