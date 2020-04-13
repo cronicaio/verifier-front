@@ -17,6 +17,16 @@ text-align:center;
 }
 
 @media (min-width: 576px) {
+  .logoPic {
+    width:10%
+  }
+  .logo {
+    color: white;
+    position: absolute;
+    bottom:-50px;
+    width:100%;
+text-align:center
+  }
   .ResultBlock {
     color: black;
 
