@@ -5,7 +5,6 @@ import * as serviceWorker from './serviceWorker';
 
 import App from './pages/App';
 
-import 'circular-std';
 import './index.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));
