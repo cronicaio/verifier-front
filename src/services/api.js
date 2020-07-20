@@ -51,7 +51,6 @@ const postFormData = (path, body, token) => {
   return axios({
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-      Authorization: `${token ? `Bearer ${token}` : 'Basic dHJ1c3RlZGNsaWVudGlkOktBOW9uRXBhODFVcTlhb3E3QnpnOTFiZElkYVlkMQ=='}`,
     },
     method: 'post',
     url: `${BASE_URL}/${path}`,
