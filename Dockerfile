@@ -7,7 +7,7 @@ WORKDIR /home/node/
 RUN npm install
 RUN npm run build
 
-FROM httpd:2.4.53-alpine3.15
+FROM httpd:2.4.54-alpine3.16
 
 #Add config for http to https rewrite rule
 ADD ./config/httpd.conf /usr/local/apache2/conf/httpd.conf
